@@ -1,0 +1,71 @@
+html {
+  min-height: 100%;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto|Architects+Daughter);
+
+/*@import url(https://fonts.googleapis.com/css?family=Signika);*/
+
+body{
+
+  background-image: url("../assets/fond.jpg") ;
+  background-size:cover;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+  font-size : 0.9em;
+}
+
+
+h2 , h3{
+  text-align: center;
+}
+h4 {
+  font-size: 1.2em;
+}
+
+.wrapper {
+  width: auto;
+  max-width: 1200px;
+  margin: 5px auto;
+
+}
+
+.main {
+
+}
+
+.container {
+
+  font-family: 'Roboto', "Helvetica", sans-serif;
+  border:2px solid #fff;
+  border-top : 5px solid #fff;
+  box-shadow: 0 0 10px rgba(95,95,95,0.5);
+  background: rgba(255,255,255,0.7);
+  border-radius: 10px ;
+
+  margin-top: 10px;
+
+  padding:10px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+}
+
+blockquote {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 1.2em;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  /*quotes: "\201C""\201D""\2018""\2019";*/
+  text-align: center;
+}
+.subquote {
+  font-size: 0.8em;
+  margin-top: -35px;
+  text-align :center;
+}
+
+@import "./styles/*";
+

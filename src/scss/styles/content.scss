@@ -1,0 +1,120 @@
+.section {
+  padding: 10px 60px 30px 60px;
+  width: auto;
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  color: #333;
+
+}
+
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+  .section {
+    padding: 5px!important;
+  }
+}
+
+.section a , .footer a {
+  transition: color 0.2s ease;
+  color : #F3980A;
+  /*text-decoration: none;*/
+}
+.section a:hover {
+  color: #ff8226;
+}
+
+
+.section h1 {
+  text-align: center;
+  text-shadow: 1px 1px #fff;
+  font-size: 1.7em;
+  color : #444!important;
+}
+
+.section h2 {
+  font-size: 1.5em;
+  text-shadow: 1px 1px #fff;
+  color: #87A3B3;
+
+}
+
+
+
+.section-contain {
+  flex: 1 1 auto;
+  min-height: 0;
+  flex-direction: column;
+}
+
+
+@media all and (max-width: 910px)
+{
+  .big-section {
+    flex-direction: column;
+  }
+
+}
+
+@media all and (min-width: 910px)
+{
+  .big-section {
+    flex-direction: row;
+  }
+  .section-contain {
+    min-width: 400px;
+  }
+
+}
+
+.big-section {
+  display: flex;
+  min-height: 0;
+}
+
+.informations-right,.informations-left {
+  max-width: 400px;
+  display: inline-block;
+}
+
+
+
+.block-info {
+  padding: 10px;
+  margin: 10px auto;
+  margin: 0;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.section h2 {
+  border-bottom: 4px solid rgba(135,163,179,0.4);
+  width: 85%;
+  text-align: left;
+  padding-bottom: 5px;
+  text-shadow : 1px 2px 0 #fff;
+}
+
+.block-info img {
+  max-width:100%;
+}
+
+.block-info--primary {
+  /*background: rgba(255,255,255,0.9);*/
+  background: url("../assets/swirl.png");
+  border-radius: 10px;
+  border:1px solid #eee;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2)
+}
+
+.activite-titre {
+  font-size: 1.3em;
+  margin: 2px 0;
+  font-weight: normal;
+}
+
+.activite-sub {
+  color: #7d7d7d;
+  font-weight: normal;
+  margin : 5px 0 ;
+}

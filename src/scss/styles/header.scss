@@ -1,0 +1,111 @@
+.header {
+  background: rgba(255,255,255,0.7);
+
+  box-shadow: 0 0 10px rgba(95,95,95,0.5);
+  border:2px solid #fff;
+  border-top : 5px solid #fff;
+  border-radius: 10px ;
+  font-family: 'Roboto', "Helvetica", sans-serif;
+
+  position: relative;
+
+}
+.top-header {
+  overflow: hidden;
+  min-height: 300px;
+  position: relative;
+}
+
+.site-title--alter {
+  color: #FEA702;
+  font-size: 0.7em;
+}
+
+.keywords {
+  position: absolute;
+  top : 10px;
+  font-size : 1em;
+  color: #96c21a!important;
+}
+.keywords-left {
+  left : 30px;
+}
+.keywords-right {
+  margin-top: 80px;
+  right : 30px;
+  top: 5px;
+  text-align: center;
+}
+
+.header-contact:before{
+  content:"✉";
+}
+.header-tel:before{
+  content:"📱";
+}
+.header-contact:hover {
+  color: #ff8226;
+}
+
+.header-contact,.header-tel {
+  color : #F3980A;
+  font-size: 1.6em;
+  /*text-align : right;*/
+  display: block;
+  padding-right: 5px;
+}
+.header-contact {
+  text-decoration: none;
+  font-size: 1em;
+}
+
+
+.site-title {
+  left: 20px;
+  font-size: 2.5em!important;
+  color: #87A3B3;
+  font-family: 'Architects Daughter', cursive;
+}
+
+.logo {
+  width: 468px;
+  margin: 0 auto;
+  display: block;
+}
+
+@media all and (max-width: 960px)
+{
+  .logo img{
+    opacity: 0.35;
+  }
+}
+
+@media all and (max-width: 468px) {
+  .logo img{
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 650px)
+{
+
+  .logo img{
+    position: absolute;
+  }
+
+  .header-contact {
+    margin:5px;
+  }
+
+  .keywords {
+
+    position: relative;
+    text-align: center;
+    margin:0 0 1em 0;
+    width: 100%;
+    right: 0;
+    left:0;
+  }
+
+}
+

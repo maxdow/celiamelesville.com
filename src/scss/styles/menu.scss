@@ -1,0 +1,69 @@
+.menu {
+  font-family: 'Architects Daughter', cursive;
+  background: #76A8CB;
+  background: radial-gradient(ellipse at center, #76a8cb 0%,#70b0e0 100%);
+  /*background: #96C21A;*/
+  border-top: 1px solid #fff;
+  padding:5px;
+  font-size: 1.6em;
+  border-radius: 10px ;
+
+}
+
+.menu ul{
+  list-style: none;
+  margin:0;
+  display: flex;
+  flex-wrap:wrap;
+  /*width: 100%;*/
+}
+.menu li {
+  position: relative;
+  margin: 0 1em;
+  cursor: pointer;
+  flex: 1;
+}
+
+.menu li a {
+  text-decoration : none;
+  color : #222;
+}
+
+.menu li:hover, .menu li a:hover{
+  color : #F3980A;
+}
+.menu li:hover .sous-menu  {
+  display: block!important;
+}
+
+
+.sous-menu {
+  position: absolute;
+  display: none!important;
+  padding:0;
+  margin:0;
+  background: #76A8CB;
+  border: 2px solid #fff;
+  border-top : none;
+  padding:2px 5px;
+  box-shadow: 0 8px 10px rgba(0,0,0,0.4);
+  border-radius: 0 0 5px 5px;
+  z-index: 1000;
+}
+.sous-menu a {
+  transition: color 0.2s ease;
+}
+.sous-menu li {
+  font-size: 0.8em;
+  width: 200px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+
+  height: 40px;
+  margin:0;
+  color : #222;
+  line-height: 2;
+
+}
+
