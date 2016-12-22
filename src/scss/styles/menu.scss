@@ -1,13 +1,10 @@
 .menu {
-  font-family: 'Architects Daughter', cursive;
-  background: #76A8CB;
-  background: radial-gradient(ellipse at center, #76a8cb 0%,#70b0e0 100%);
-  /*background: #96C21A;*/
-  border-top: 1px solid #fff;
+  font-family: 'Signika', cursive;
+  background: #a7a0ba;
   padding:5px;
-  font-size: 1.6em;
+  font-size: 1.4em;
   border-radius: 10px ;
-
+  box-shadow: 0 0 10px rgba(255,255,255,0.8)
 }
 
 .menu ul{
@@ -19,7 +16,7 @@
 }
 .menu li {
   position: relative;
-  margin: 0 1em;
+  margin: 0 0.4em;
   cursor: pointer;
   flex: 1;
 }

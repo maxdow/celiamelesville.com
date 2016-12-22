@@ -1,0 +1,11 @@
+.carte-container {
+  display: flex;
+  justify-content: center;
+}
+
+.carte-container > div {
+  width: 176px;
+  height: 300px;
+  border: 1px solid #ddd;
+  margin:1em;
+}
