@@ -31,16 +31,16 @@ module.exports = {
 
     new HtmlWebpackPlugin({
         template: "./src/index.hbs",
-        inject: "body"
+        // inject: "body"
     }),
     new HtmlWebpackPlugin({
         template: "./src/creations/index.hbs",
-        inject: false,
+        // inject: "body",
         filename:"creations/index.html"
     }),
     new HtmlWebpackPlugin({
         template: "./src/boutique/index.hbs",
-        inject: "body",
+        // inject: "body",
         filename:"boutique/index.html"
 
     })
