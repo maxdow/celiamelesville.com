@@ -1,27 +1,27 @@
 {
-  "globals" :{
-    "__VERSION__" : true
-  },
-  "env": {
-    "browser": true,
-    "node": true
-  },
-  "parserOptions": {
-    "ecmaVersion": 6,
-    "sourceType": "module",
-    "ecmaFeatures": {
-        "experimentalObjectRestSpread": true
+    "env": {
+        "es6": true,
+        "browser": true,
+        "commonjs" : true
+    },
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true,
+            "jsx":true
+        }
+    },
+    "plugins" : ["react"],
+    "extends": ["eslint:recommended","plugin:react/recommended"],
+
+    "rules":{
+        "no-unused-vars" : [1, {"vars": "all", "args": "all"}],
+        "no-unexpected-multiline" : 2,
+        "arrow-spacing": 1,
+        "no-console" : 1,
+        "react/prop-types" : [0]
+
     }
-  },
-  "extends": "eslint:recommended",
-  "rules": {
-    "quotes": [2, "double"],
-    "strict": [2, "never"],
-    "react/jsx-uses-react": 2,
-    "react/jsx-uses-vars": 2,
-    "react/react-in-jsx-scope": 2
-  },
-  "plugins": [
-    "react"
-  ]
+
 }

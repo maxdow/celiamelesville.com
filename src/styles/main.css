@@ -30,9 +30,6 @@ h4 {
 
 }
 
-.main {
-
-}
 
 .container {
 
@@ -51,20 +48,4 @@ h4 {
   flex: 1;
   width: 100%;
 }
-
-blockquote {
-  font-family: 'Architects Daughter', cursive;
-  font-size: 1.2em;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
-  /*quotes: "\201C""\201D""\2018""\2019";*/
-  text-align: center;
-}
-.subquote {
-  font-size: 0.8em;
-  margin-top: -35px;
-  text-align :center;
-}
-
-@import "./styles/*";
 

@@ -1,0 +1,102 @@
+.panier {
+  border: 1px solid #555;
+  padding: 5px;
+  position: absolute;
+  top: 0;
+  right: 20%;
+  background: rgba(255,255,255,0.7);
+}
+
+.panier-liste {
+  list-style: none;
+  font-size: 0.8em;
+}
+.panier-total {
+  margin-top: 4px;
+  padding : 2px;
+  border-top : 2px dashed #adadad;
+  text-align: right;
+}
+/*.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #222;
+}*/
+
+.bigcart {
+  padding:10px;
+  flex:1 1 auto;
+  position: relative;
+  margin-bottom: 1em;
+}
+
+.bigcart-table {
+  width: 100%;
+}
+.bigcart-table thead {
+  text-align: left;
+  background: #ddd;
+}
+.bigcart-table thead th {
+  padding: 4px;
+}
+
+.bigcart-table--produit {
+  border-bottom:1px solid #888;
+  margin:5px 0;
+}
+
+.bigcart-table tfoot td{
+  border-top: 1px solid #aaa;
+  padding-top: 2px;
+}
+.bigcart--image {
+  max-width: 70px;
+  max-height: 85px
+}
+.bigcart--nom {
+  width: 250px;
+}
+.bigcart--q,.bigcart--q th,.bigcart--q input{
+  max-width: 40px;
+  text-align: center;
+  padding: 4px;
+}
+
+.bigcart--prix {
+  width: 50px;
+  text-align: center;
+}
+
+.bigcart--total {
+  text-align: right;
+}
+.bigcart-table tfoot .bigcart--total {
+  font-size: 1.4em;
+}
+
+.total {
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.paypal-button {
+right: 0;
+position: absolute;
+}
+.frais-port {
+  margin:5px 0;
+}
+.frais-port-block {
+  list-style: none;
+}
+.frais-port input {
+  width: 2em;
+}
+.frais-port-block label {
+  margin: 0 50%;
+  width: 100px;
+  display: block;
+}
