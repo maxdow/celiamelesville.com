@@ -14,8 +14,8 @@
   display: block;
   margin: 10px;
 
-  max-width : 200px;
-  height: 250px;
+  max-width : 140px;
+  height: 180px;
   border: 1px solid #222;
 
   overflow: hidden;
@@ -34,16 +34,15 @@
 
 .boutique-item-description {
   position: absolute;
-  top: auto;
-  bottom: 5em;
-  background: #fff;
-  opacity: 0.75;
+  bottom: 0;
+  background: rgba(255,255,255,0.8);
+  /*opacity: 0.8;*/
   width: 100%;
-  min-height: 8em;
-  max-height: 10em;
+/*  min-height: 8em;*/
+/*  max-height: 10em;*/
   color: #3c4a50;
-  transition: transform 0.35s;
-  transform: translate3d(0,100%,0);
+  /*transition: transform 0.35s;
+  transform: translate3d(0,100%,0);*/
 }
 .boutique-item-titre {
   font-size: 1.2em;
@@ -59,15 +58,17 @@
   font-size: 1.4em;
   margin: 0;
   transition : all ease 0.2s;
-  color:#ff8226;
-  background: #525252
+  color:#fff;
+  background: #222
 }
 
+/*
 .boutique-item:hover .boutique-item-description,
 .boutique-item:hover .boutique-item-titre,
 .boutique-item:hover .boutique-item-prix {
   transform: translate3d(0,0,0);
 }
+*/
 .boutique-item:hover .boutique-item-prix {
   margin: 1.1em;
   background: #222;

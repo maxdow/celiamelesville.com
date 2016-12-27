@@ -4,7 +4,8 @@
   padding:5px;
   font-size: 1.4em;
   border-radius: 10px ;
-  box-shadow: 0 0 10px rgba(255,255,255,0.8)
+  box-shadow: 0 0 10px rgba(255,255,255,0.8);
+  border:1px solid #eee;
 }
 
 .menu ul{
@@ -27,7 +28,7 @@
 }
 
 .menu li:hover, .menu li a:hover{
-  color : #F3980A;
+  color : #fff;
 }
 .menu li:hover .sous-menu  {
   display: block!important;

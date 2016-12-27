@@ -5,8 +5,8 @@ const produits = [{
   },
   lien: "deck",
   cat: {
-    fr: "Le Jeu",
-    en: "The Deck"
+    fr: "Les Jeux",
+    en: "The Decks"
   },
   prix: 35,
   poids: 300,
@@ -24,8 +24,8 @@ const produits = [{
   },
   lien: "jeu-limite",
   cat: {
-    fr: "Le Jeu",
-    en: "The Deck"
+    fr: "Les Jeux",
+    en: "The Decks"
   },
   prix: 37,
   poids: 300,
