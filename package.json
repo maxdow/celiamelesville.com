@@ -2,7 +2,7 @@
   "name": "sitecelia",
   "version": "1.0.0",
   "scripts": {
-    "start": "gulp",
+    "start": "node server",
     "build": "webpack --config webpack.dev.js",
     "deploy": "npm run build && node deploy"
   },
