@@ -31,30 +31,35 @@ module.exports = {
 
     new HtmlWebpackPlugin({
         template: "./src/index.hbs",
-        // inject: "body"
     }),
     new HtmlWebpackPlugin({
         template: "./src/creations/index.hbs",
-        // inject: "body",
         filename:"creations/index.html"
     }),
     new HtmlWebpackPlugin({
+        template: "./src/tanis-lenormand/index.hbs",
+        filename:"tanis-lenormand/index.html"
+    }),
+    new HtmlWebpackPlugin({
         template: "./src/boutique/index.hbs",
-        // inject: "body",
         filename:"boutique/index.html"
-
-    })
-    /*new HandlebarsPlugin({
-            // path to main hbs template
-            entry: sourcePath,
-            // filepath to result
-            output:path.join(__dirname, "public"),
-
-            // globbed path to partials, where folder/filename is unique
-            partials: [
-                "./src/partials"
-            ]
-    })*/
+    }),
+    new HtmlWebpackPlugin({
+        template: "./src/consultations/index.hbs",
+        filename:"consultations/index.html"
+    }),
+    new HtmlWebpackPlugin({
+        template: "./src/guidance/index.hbs",
+        filename:"guidance/index.html"
+    }),
+    new HtmlWebpackPlugin({
+        template: "./src/therapie/index.hbs",
+        filename:"therapie/index.html"
+    }),
+    new HtmlWebpackPlugin({
+        template: "./src/contact/index.hbs",
+        filename:"contact/index.html"
+    }),
   ],
   devServer: {
       contentBase: __dirname + "/public"

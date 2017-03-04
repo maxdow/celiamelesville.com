@@ -4,7 +4,9 @@
   "scripts": {
     "start": "node server",
     "build": "webpack --config webpack.dev.js",
-    "deploy": "npm run build && node deploy"
+    "build-prod": "webpack --config webpack.prod.js",
+    "deploy": "webpack --config webpack.prod.js && node deploy",
+    "stats": "webpack --config webpack.prod.js --profile --json > stats.json"
   },
   "devDependencies": {
     "babel-core": "^6.21.0",
@@ -15,14 +17,16 @@
     "css-loader": "^0.26.1",
     "eslint": "^3.12.2",
     "eslint-plugin-react": "^6.8.0",
-    "extract-text-webpack-plugin": "^1.0.1",
+    "extract-text-webpack-plugin": "2.0.0-rc.2",
     "file-loader": "^0.9.0",
+    "ftp": "^0.3.10",
+    "ftp-client": "^0.2.2",
     "handlebars-loader": "^1.4.0",
     "html-webpack-plugin": "^2.24.1",
     "react-hot-loader": "^3.0.0-beta.6",
     "style-loader": "^0.13.1",
-    "webpack": "^2.2.0-rc.2",
-    "webpack-dev-server": "^2.2.0-rc.0"
+    "webpack": "^2.2.0",
+    "webpack-dev-server": "^2.2.0"
   },
   "dependencies": {
     "jsftp": "^1.5.5",

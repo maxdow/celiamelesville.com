@@ -3,9 +3,17 @@
   justify-content: center;
 }
 
-.carte-container > div {
-  width: 176px;
-  height: 300px;
-  border: 1px solid #ddd;
-  margin:1em;
+.titre-creation {
+  font-size: 1.5em;
+  text-align: center;
+  cursor: pointer;
+}
+.carte-container a {
+  width: 161px;
+  height: 268px;
+  /*border: 1px solid #ddd;*/
+  margin:2.5em;
+}
+.carte-container > div:hover {
+  color : #a7a0ba
 }

@@ -38,7 +38,7 @@ const DetailsProduit = ({nom,prix,description,onAdd, lang}) => (
    <div className="product-detail--container">
       <h2 dangerouslySetInnerHTML={createMarkup(nom[lang])}></h2>
       <div className="product-detail--prix" >{prix.toFixed(2)} €</div>
-      <div className="product-detail--description" dangerouslySetInnerHTML={createMarkup(description[lang])}></div>
+      <div className="product-detail--description" dangerouslySetInnerHTML={createMarkup(description ? description[lang] : nom[lang])}></div>
 
       <Link to="/cart" className="buy-button" onClick={onAdd}>{lang === "fr" ? "Ajouter au panier" :"Add to basket"}</Link>
       <Link to="/">{lang === "fr" ? "Retour à la boutique" : "Back to the shop"}</Link>

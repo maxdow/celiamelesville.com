@@ -11,7 +11,7 @@ new WebpackDevServer(webpack(config), {
     colors: true
   },
   quiet: true,
-}).listen(3100, "localhost", function (err, result) {
+}).listen(3100, "0.0.0.0", function (err, result) {
   if (err) {
     return console.log(err);
   }

@@ -13,8 +13,12 @@ module.exports = {
     "./src/index"
   ],
   output: {
-    path: path.join(__dirname, "public"),
+    path: path.join(__dirname, "dist"),
     filename: "bundle.js"
+  },
+  externals : {
+    "react": "React",
+    "react-dom": "ReactDOM"
   },
   plugins: [
     new webpack.DefinePlugin({
@@ -24,20 +28,47 @@ module.exports = {
       }),
     new ExtractTextPlugin({ filename: 'bundle.css', disable: false, allChunks: true }),
     new HtmlWebpackPlugin({
-        template: "./src/index.hbs",
-        // inject: "body"
+        inject :false,
+        template: "./src/index.hbs"
     }),
     new HtmlWebpackPlugin({
+        inject :false,
         template: "./src/creations/index.hbs",
-        // inject: "body",
         filename:"creations/index.html"
     }),
     new HtmlWebpackPlugin({
-        template: "./src/boutique/index.hbs",
-        // inject: "body",
+        inject :false,
+        template: "./src/tanis-lenormand/index.hbs",
+        filename:"tanis-lenormand/index.html"
+    }),
+    new HtmlWebpackPlugin({
+        inject :false,
+        template: "./src/boutique/index-prod.hbs",
         filename:"boutique/index.html"
-
-    })
+    }),
+    new HtmlWebpackPlugin({
+        inject :false,
+        template: "./src/consultations/index.hbs",
+        filename:"consultations/index.html"
+    }),
+    new HtmlWebpackPlugin({
+        inject :false,
+        template: "./src/guidance/index.hbs",
+        filename:"guidance/index.html"
+    }),
+    new HtmlWebpackPlugin({
+        inject :false,
+        template: "./src/therapie/index.hbs",
+        filename:"therapie/index.html"
+    }),
+    new HtmlWebpackPlugin({
+        inject :false,
+        template: "./src/contact/index.hbs",
+        filename:"contact/index.html"
+    }),
+    new webpack.LoaderOptionsPlugin({
+     minimize: true
+   })
   ],
 
   module: {

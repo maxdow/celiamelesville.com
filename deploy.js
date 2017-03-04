@@ -1,63 +1,93 @@
 const JSFtp = require("jsftp");
-var path = require("path");
-var fs = require("fs");
+const path = require("path");
+const fs = require("fs");
 
 const config = {
 
-    username: "maxlab",
+    user: "maxlab",
     password: "tikE1234", // optional, prompted if none given
 
     host: "ftp.cluster014.ovh.net",
     port: 21,
-    localRoot: "public",
-
+    localRoot: "dist",
+    debug : console.log,
     continueOnError : false,
     remoteRoot: "/test/",
 }
 
 
-
-var Ftp = new JSFtp({
+/*
+const Ftp = new JSFtp({
   host : config.host,
   user : config.username
 });
+*/
+const dossierAEnvoyer = "dist";
+const destination = "/celia/";
 
-var dossierAEnvoyer = "dist";
-var destination = "/www/atelier/";
+  var Client = require('ftp');
 
-var listeFichiers = fs.readdirSync(dossierAEnvoyer);
+  var c = new Client();
 
+
+  // connect to localhost:21 as anonymous
+
+
+const walkSync = (dir, filelist = []) => {
+  fs.readdirSync(dir).forEach(file => {
+
+    filelist = fs.statSync(path.join(dir, file)).isDirectory()
+      ? walkSync(path.join(dir, file), filelist)
+      : filelist.concat(path.join(dir, file));
+
+  });
+return filelist;
+}
+
+const listeFichiers = walkSync(dossierAEnvoyer);
+
+
+  c.on('ready', function() {
+    console.log("ready ✔ ")
+    envoieFichier(0,listeFichiers);
+  });
+
+c.connect(config);
+
+
+/*
 Ftp.auth(config.username, config.password, function (err) {
-  console.log("auth ok",err);
+  if(err) exit;
 
-  var i = 0 ;
+  console.log("auth ✔ ok");
 
-  function envoieFichier() {
-    var fichier = path.resolve(dossierAEnvoyer,listeFichiers[i]);
-    var nomFichier = path.basename(fichier);
-    console.log(fichier);
-    Ftp.put(fichier, destination+nomFichier,function(err){
-      if(err){
-        console.error(err);
+
+  envoieFichier(0,listeFichiers);
+})*/
+
+
+
+function envoieFichier(nFichier,liste) {
+  const fichier = path.resolve(liste[nFichier]);
+  const nomFichier = path.basename(fichier);
+  console.log("Sending.... ",fichier," ....\n");
+
+  c.put(fichier, destination+nomFichier,function(err){
+    if(err){
+      console.error("Error while sending ",nomFichier,"\n -> ",err);
+        c.end()
+    } else {
+      console.log("✔ ok");
+      nFichier++;
+
+      if(nFichier < liste.length) {
+        setTimeout(() => envoieFichier(nFichier,liste),500);
       } else {
-        console.log("ok");
-        i++;
-
-        if(i < listeFichiers.length) {
-          setTimeout(envoieFichier,500);
-        } else {
-          console.log("Done");
-          Ftp.raw.quit(function(err, data) {
-              if (err) return console.error(err);
-
-              console.log("Bye!");
-          });
-        }
-
+        console.log("Done");
+        c.end()
       }
 
-    });
-  }
+    }
 
-  envoieFichier();
-})
+  });
+}

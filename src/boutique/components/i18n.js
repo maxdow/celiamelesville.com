@@ -15,7 +15,8 @@ const styleA = {
   cursor : "pointer"
 }
 const styleI18 = {
-  textAlign : "right"
+  textAlign : "center",
+  fontSize : "1.2em"
 }
 
 const I18nComponent = ({lang,dispatch}) => (

@@ -38,7 +38,24 @@ const produits = [{
     <p> Finishes: matt varnish, the cards are golden on the edge. rigid case.
     <p>This <strong> special edition includes a numbered and signed deck</strong> along with a bookmark</p>`
   }
-}, {
+},{
+  nom: {
+    fr: "Tanis Lenormand",
+    en: "Tanis Lenormand"
+  },
+  lien: "tanis",
+  cat: {
+    fr: "Les Jeux",
+    en: "The Decks"
+  },
+  prix: 32,
+  poids: 120,
+  images: ["tanis/tanis.png"],
+  description: {
+    fr : `Preorder`,
+    en : `Preorder`
+  }
+},{
   nom: {
     fr: "Marque Page",
     en: "Bookmark"

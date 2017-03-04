@@ -13,22 +13,26 @@ import Boutique from "./app"
 const store = createStore(rootReducer);
 const container = document.getElementById("boutique-container");
 
-if (process.env.NODE_ENV === "production") {
-  ReactDOM.render(<Provider store={store}><Boutique /></Provider>, container);
-} else {
-  ReactDOM.render(<Provider store={store}><Boutique /></Provider>, container);
-  if ( module.hot ) {
-    module.hot.accept("./app",() => {
-      const NextApp = require("./app").default
-      ReactDOM.render(
-        <AppContainer>
-          <Provider store={store}>
-            <NextApp />
-          </Provider>
-        </AppContainer>,
-        container
-      );
-    })
+if(container){
+
+  if (process.env.NODE_ENV === "production") {
+    ReactDOM.render(<Provider store={store}><Boutique /></Provider>, container);
+  } else {
+    ReactDOM.render(<Provider store={store}><Boutique /></Provider>, container);
+    if ( module.hot ) {
+      module.hot.accept("./app",() => {
+        const NextApp = require("./app").default
+        ReactDOM.render(
+          <AppContainer>
+            <Provider store={store}>
+              <NextApp />
+            </Provider>
+          </AppContainer>,
+          container
+        );
+      })
+    }
+
   }
 
 }

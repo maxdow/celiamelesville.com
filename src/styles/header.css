@@ -1,16 +1,35 @@
 .header {
   position: relative;
+  background:url("/assets/1.jpg") no-repeat ;
+  background-size: cover
 }
 .top-header {
-  /*overflow: hidden;*/
+
   min-height: 170px;
   position: relative;
+  padding-bottom:1em;
+}
+@media all and (max-width: 910px)
+{
+  .top-header {
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 100%);
+  }
 }
 
-.top-header img {
+.left-title {
   position: absolute;
+}
+
+.left-title a:before {
+    content: "✉";
+}
+.left-title a{
+  text-decoration: none;
+  font-size: 1em;
+}
+.top-header img {
   left : 0;
-  top: 0;
+  top: 10px;
   display: block;
   /*width: 300px;*/
   /*height: auto;*/
@@ -34,8 +53,19 @@ h1.site-title {
   color : inherit;
 }
 .soustitre {
-  font-size : 2.2em;
-  font-weight: 300;
-  font-family: 'Ruthie', cursive;
-  margin : 0
+  font-size : 2em;
+  font-weight: 200;
+  font-family: 'Calligraffitti', cursive;
+  margin : 0 ;
+}
+
+.social {
+  position: absolute;
+  padding: 1em;
+  right: 0;
+  top:0;
+  display: flex;
+}
+.social img {
+  margin : 20px;
 }
