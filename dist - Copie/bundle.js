@@ -4516,7 +4516,8 @@ var styleA = {
   cursor: "pointer"
 };
 var styleI18 = {
-  textAlign: "right"
+  textAlign: "center",
+  fontSize: "1.2em"
 };
 
 var I18nComponent = function I18nComponent(_ref) {
