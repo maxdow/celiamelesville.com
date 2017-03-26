@@ -58,7 +58,7 @@ const Produit = ({nom, images, prix,lien,lang}) => {
 const ProductListComponent = ({categories,lang}) => (
 
   <div className="boutique">
-          {[...categories.keys()].map(function(categorie){
+          {Object.keys(categories).map(function(categorie){
             return <div key={categorie}>
               <h2>{categorie}</h2>
               <div className="boutique-categorie">{
