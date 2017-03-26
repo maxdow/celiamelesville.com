@@ -1,4 +1,5 @@
 {{> header title='Boutique - Celia Melesville' }}
+<script src="https://cdn.ravenjs.com/3.13.1/raven.min.js"></script>
 
 <body>
   <div class="wrapper">
@@ -18,7 +19,9 @@
   </div>
 
   </div>
-
+  <script>
+    Raven.config('https://ec4ac1e9c76b4352b0d90e51db6afb27@sentry.io/151911').install()
+  </script>
 <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
 <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
 <script type="text/javascript" src="https://celiamelesville.com/bundle.js"></script>
