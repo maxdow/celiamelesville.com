@@ -11,7 +11,7 @@ function createMarkup(markup) {
   return {__html: markup};
 }
 
-
+/*
 const getCategories = (produits,langue) => {
 
     const categories = new Map(produits.map(function(item) {
@@ -24,6 +24,17 @@ const getCategories = (produits,langue) => {
       categories.set(item.cat[langue],cat);
     });
     return categories ;
+}*/
+
+const getCategories = (produits,langue) => {
+
+    return produits.reduce((acc,item) => {
+      if(!acc[item.cat[langue]]) {
+        acc[item.cat[langue]] = []
+      }
+      acc[item.cat[langue]].push(item)
+      return acc
+    },{});
 }
 
 const Produit = ({nom, images, prix,lien,lang}) => {
@@ -51,7 +62,7 @@ const ProductListComponent = ({categories,lang}) => (
             return <div key={categorie}>
               <h2>{categorie}</h2>
               <div className="boutique-categorie">{
-                categories.get(categorie).map((dataProduit,i) => <Produit lang={lang} {...dataProduit} key={i}/>)
+                categories[categorie].map((dataProduit,i) => <Produit lang={lang} {...dataProduit} key={i}/>)
               }</div>
               </div>;
           })}
