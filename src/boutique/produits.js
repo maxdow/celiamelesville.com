@@ -52,8 +52,8 @@ const produits = [{
   poids: 120,
   images: ["tanis/tanis.png"],
   description: {
-    fr : `Preorder`,
-    en : `Preorder`
+    fr : `Ce jeu est constitué de 40 cartes et d'un petit livre pour vous aider dans l'interprétation de vos tirages`,
+    en : `This deck includes 40 cards and a book ( is bilingual so it is also in English) to help you interpret your spreads.`
   }
 },{
   nom: {
