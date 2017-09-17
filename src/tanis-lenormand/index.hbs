@@ -1,4 +1,5 @@
 {{> header title='Boutique - Celia Melesville' }}
+<link rel="stylesheet" href="/lightbox/index.css">
 
 <body>
   <style>
@@ -44,10 +45,25 @@
           <p>Ce jeu est constitué de 40 cartes et d'un petit livre pour vous aider dans l'interprétation de vos tirages</p>
         </div>
 
-        <img src="/assets/tanis1.jpg" width="500" style="margin: 10px auto" />
+        <div class="slightbox-container">
+
+          <a href="/assets/tanis1.jpg"><img src="/assets/tanis1.jpg" width="500" style="margin: 10px auto;display:block" /></a>
+
+          <a href="/assets/tanis2.jpg"><img src="/assets/tanis2.jpg" width="500" style="margin: 10px auto;display:block" /></a>
+        </div>
+
+        <div class="slightbox-container" style="margin: 10px auto;display:block">
 
 
-        <img src="/assets/tanis2.jpg" width="500" style="margin: 10px auto" />
+          <a href="/assets/tanis/0.jpg">
+            <img height="250" src="/assets/tanis/0.jpg"></a>
+          <a href="/assets/tanis/1.jpg">
+            <img height="250" src="/assets/tanis/1.jpg">
+          </a>
+          <a href="/assets/tanis/2.jpg">
+            <img height="250" src="/assets/tanis/2.jpg">
+          </a
+        </div>
     </div>
     </section>
 
@@ -56,7 +72,12 @@
 
   </div>
   {{> footer}}
+  <script src="/lightbox/index.js">
 
+  </script>
+  <script>
+    slightBox.make();
+  </script>
 </body>
 
 </html>
