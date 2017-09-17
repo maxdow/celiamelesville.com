@@ -1,20 +1,21 @@
-const path = require("path");
-const webpack = require("webpack");
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path")
+const webpack = require("webpack")
+var HtmlWebpackPlugin = require("html-webpack-plugin")
 //const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 //const templateIndex = path.resolve(__dirname, "./src/index.html");
-const sourcePath = path.resolve(__dirname, "./src");
-const partials = path.resolve(__dirname, "./src/partials");
+const sourcePath = path.resolve(__dirname, "./src")
+const partials = path.resolve(__dirname, "./src/partials")
 
 module.exports = {
-  devtool : "cheap-module-eval-source-map",
+  devtool: "cheap-module-eval-source-map",
   entry: [
     "react-hot-loader/patch",
     "webpack-dev-server/client?http://localhost:3100",
     "webpack/hot/only-dev-server",
     "./src/index"
   ],
+  bail: true,
   output: {
     path: path.join(__dirname, "public"),
     filename: "bundle.js",
@@ -23,46 +24,46 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({
-        "process.env": {
-          "NODE_ENV": JSON.stringify("dev")
-        }
-      }),
-    new webpack.NoErrorsPlugin(),
+      "process.env": {
+        NODE_ENV: JSON.stringify("dev")
+      }
+    }),
+    new webpack.NoEmitOnErrorsPlugin(),
 
     new HtmlWebpackPlugin({
-        template: "./src/index.hbs",
+      template: "./src/index.hbs"
     }),
     new HtmlWebpackPlugin({
-        template: "./src/creations/index.hbs",
-        filename:"creations/index.html"
+      template: "./src/creations/index.hbs",
+      filename: "creations/index.html"
     }),
     new HtmlWebpackPlugin({
-        template: "./src/tanis-lenormand/index.hbs",
-        filename:"tanis-lenormand/index.html"
+      template: "./src/tanis-lenormand/index.hbs",
+      filename: "tanis-lenormand/index.html"
     }),
     new HtmlWebpackPlugin({
-        template: "./src/boutique/index.hbs",
-        filename:"boutique/index.html"
+      template: "./src/boutique/index.hbs",
+      filename: "boutique/index.html"
     }),
     new HtmlWebpackPlugin({
-        template: "./src/consultations/index.hbs",
-        filename:"consultations/index.html"
+      template: "./src/consultations/index.hbs",
+      filename: "consultations/index.html"
     }),
     new HtmlWebpackPlugin({
-        template: "./src/guidance/index.hbs",
-        filename:"guidance/index.html"
+      template: "./src/guidance/index.hbs",
+      filename: "guidance/index.html"
     }),
     new HtmlWebpackPlugin({
-        template: "./src/therapie/index.hbs",
-        filename:"therapie/index.html"
+      template: "./src/therapie/index.hbs",
+      filename: "therapie/index.html"
     }),
     new HtmlWebpackPlugin({
-        template: "./src/contact/index.hbs",
-        filename:"contact/index.html"
-    }),
+      template: "./src/contact/index.hbs",
+      filename: "contact/index.html"
+    })
   ],
   devServer: {
-      contentBase: __dirname + "/public"
+    contentBase: __dirname + "/public"
   },
   module: {
     rules: [
@@ -73,24 +74,27 @@ module.exports = {
         exclude: /node_modules/
       },
 
-      {test: /\.css$/, use: ["style-loader","css-loader"]},
+      { test: /\.css$/, use: ["style-loader", "css-loader"] },
 
-      {test: /\.hbs$/, use: [
-        /*{loader : "file-loader" , query :
+      {
+        test: /\.hbs$/,
+        use: [
+          /*{loader : "file-loader" , query :
           {
             name:"[path][name].html",
             context :sourcePath
           }
         },*/
-        {loader : "handlebars-loader" , query :
           {
-            partialDirs : [partials]
+            loader: "handlebars-loader",
+            query: {
+              partialDirs: [partials]
+            }
           }
-        }
-      ]
+        ]
       },
 
-      {test: /\.(png|jpg)$/, use: "file-loader?name=[name].[ext]"},
+      { test: /\.(png|jpg)$/, use: "file-loader?name=[name].[ext]" }
     ]
   }
-};
+}
