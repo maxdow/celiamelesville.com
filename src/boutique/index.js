@@ -45,4 +45,7 @@ if (container) {
     }
   }
 }
-document.getElementsByClassName("cs-loader")[0].style.display = "none"
+const load = document.getElementsByClassName("cs-loader")[0]
+if (load) {
+  load.style.display = "none"
+}
