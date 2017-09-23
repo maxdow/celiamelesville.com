@@ -57,6 +57,36 @@ if (!Array.prototype.find) {
  */
 const getProduit = lien => produits.find(produit => produit.lien === lien)
 
+class ListImages extends Component {
+  componentDidMount() {
+    if (window.slightBox) {
+      window.slightBox.make()
+    }
+  }
+  render() {
+    const { images, nom, onImageSelect, lang } = this.props
+    return (
+      <div style={{ display: "flex" }}>
+        {images.length > 1 ? (
+          <div className="product-detail--images slightbox-container">
+            {images.map((image, i) => (
+              <a href={"/images/boutique/" + image} key={i}>
+                <img
+                  src={"/images/boutique/" + image}
+                  alt={nom[lang]}
+                  onTouchStart={onImageSelect.bind(this, i)}
+                  onMouseOver={onImageSelect.bind(this, i)}
+                  draggable="false"
+                />
+              </a>
+            ))}
+          </div>
+        ) : null}
+      </div>
+    )
+  }
+}
+
 const ImagesProduit = ({ imageIndex, images, nom, lang }) => (
   <div className="product-detail--image">
     <div className="product-img-container">
@@ -64,25 +94,6 @@ const ImagesProduit = ({ imageIndex, images, nom, lang }) => (
         <img src={"/images/boutique/" + images[imageIndex]} alt={nom[lang]} draggable="false" />
       </a>
     </div>
-  </div>
-)
-
-const ListImages = ({ images, nom, onImageSelect, lang }) => (
-  <div style={{ display: "flex" }}>
-    {images.length > 1 ? (
-      <div className="product-detail--images">
-        {images.map((image, i) => (
-          <img
-            key={i}
-            src={"/images/boutique/" + image}
-            alt={nom[lang]}
-            onTouchStart={onImageSelect.bind(this, i)}
-            onMouseOver={onImageSelect.bind(this, i)}
-            draggable="false"
-          />
-        ))}
-      </div>
-    ) : null}
   </div>
 )
 

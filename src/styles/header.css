@@ -1,18 +1,16 @@
 .header {
   position: relative;
-  background:url("/assets/1.jpg") no-repeat ;
-  background-size: cover
+  background: url("/assets/1.jpg") no-repeat;
+  background-size: cover;
 }
 .top-header {
-
   min-height: 170px;
   position: relative;
-  padding-bottom:1em;
+  padding-bottom: 1em;
 }
-@media all and (max-width: 910px)
-{
+@media all and (max-width: 910px) {
   .top-header {
-    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 100%);
   }
 }
 
@@ -21,14 +19,14 @@
 }
 
 .left-title a:before {
-    content: "✉";
+  content: "✉";
 }
-.left-title a{
+.left-title a {
   text-decoration: none;
   font-size: 1em;
 }
 .top-header img {
-  left : 0;
+  left: 0;
   top: 10px;
   display: block;
   /*width: 300px;*/
@@ -36,7 +34,7 @@
 }
 
 h1.site-title {
-  margin : 0;
+  margin: 0;
   padding-top: 20px;
   font-weight: 200;
 }
@@ -45,27 +43,27 @@ h1.site-title {
   font-size: 5em;
   text-align: center;
   color: #222;
-  font-family: 'Ruthie', cursive;
+  font-family: "Ruthie", "Helvetica";
 }
 
 .site-title a {
   text-decoration: none;
-  color : inherit;
+  color: inherit;
 }
 .soustitre {
-  font-size : 2em;
+  font-size: 2em;
   font-weight: 200;
-  font-family: 'Calligraffitti', cursive;
-  margin : 0 ;
+  font-family: "Calligraffitti", "Helvetica";
+  margin: 0;
 }
 
 .social {
   position: absolute;
   padding: 1em;
   right: 0;
-  top:0;
+  top: 0;
   display: flex;
 }
 .social img {
-  margin : 20px;
+  margin: 20px;
 }

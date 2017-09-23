@@ -1,19 +1,19 @@
 .menu {
-  font-family: 'Calligraffitti', cursive;
+  font-family: "Calligraffitti", "Helvetica";
   font-weight: 400;
   background: #a7a0ba;
-  padding:5px;
+  padding: 5px;
   font-size: 1.8em;
   /*border-radius: 10px 10px 0 0 ;*/
-  box-shadow: 0 0 10px rgba(255,255,255,0.8);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
   /*border:1px solid #eee;*/
 }
 
-.menu ul{
+.menu ul {
   list-style: none;
-  margin:0;
+  margin: 0;
   display: flex;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   /*width: 100%;*/
 }
 .menu li {
@@ -24,28 +24,28 @@
 }
 
 .menu li a {
-  text-decoration : none;
-  color : #222;
+  text-decoration: none;
+  color: #222;
 }
 
-.menu li:hover, .menu li a:hover{
-  color : #fff;
+.menu li:hover,
+.menu li a:hover {
+  color: #fff;
 }
-.menu li:hover .sous-menu  {
-  display: block!important;
+.menu li:hover .sous-menu {
+  display: block !important;
 }
-
 
 .sous-menu {
   position: absolute;
-  display: none!important;
-  padding:0;
-  margin:0;
+  display: none !important;
+  padding: 0;
+  margin: 0;
   background: #a7a0ba;
   border: 1px solid #777;
-  border-top : none;
-  padding:8px;
-  box-shadow: 0 8px 10px rgba(0,0,0,0.4);
+  border-top: none;
+  padding: 8px;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.4);
   border-radius: 0 0 5px 5px;
   z-index: 1000;
 }
@@ -60,9 +60,7 @@
   width: max-content;
   text-align: center;
   height: 40px;
-  margin:0;
-  color : #222;
+  margin: 0;
+  color: #222;
   line-height: 2;
-
 }
-

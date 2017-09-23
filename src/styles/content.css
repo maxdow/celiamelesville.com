@@ -7,42 +7,38 @@
   flex-direction: column;
   color: #333;
   background: url("../assets/swirl.png");
-  box-shadow: 0 0 10px rgba(255,255,255,0.8);
-  border:1px solid #eee;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  border: 1px solid #eee;
 
   font-family: "Lato", "Helvetica", sans-serif;
   font-weight: 400;
   line-height: 30px;
 }
 
-@media only screen and (min-width : 320px) and (max-width : 480px) {
+@media only screen and (min-width: 320px) and (max-width: 480px) {
   .section {
-    padding: 5px!important;
+    padding: 5px !important;
   }
 }
 
-
-
 .section h1 {
-  font-family: "Calligraffitti", cursive;
+  font-family: "Calligraffitti", "Helvetica";
   font-size: 3em;
   font-weight: 200;
   text-align: center;
   text-shadow: 1px 1px #fff;
-  color : #444!important;
+  color: #444 !important;
 }
 
-.section h2, .citation {
-  font-family: "Calligraffitti", cursive;
+.section h2,
+.citation {
+  font-family: "Calligraffitti", "Helvetica";
   /*font-weight: 200;*/
 
   font-size: 1.6em;
   text-shadow: 1px 1px #fff;
-  color: #87A3B3;
-
+  color: #87a3b3;
 }
-
-
 
 .section-contain {
   flex: 1 1 auto;
@@ -51,59 +47,55 @@
 }
 
 .side-container {
-  display: flex
+  display: flex;
 }
-@media all and (max-width: 910px)
-{
+@media all and (max-width: 910px) {
   .side-container {
     flex-direction: column;
   }
   .side-content {
-    max-width: 100%
+    max-width: 100%;
   }
   .side-content img {
-    margin : 0 auto;
-    display: block
+    margin: 0 auto;
+    display: block;
   }
 }
 
-@media all and (min-width: 910px)
-{
+@media all and (min-width: 910px) {
   .side-container {
     flex-direction: row;
   }
   .side-content {
-    max-width: 30%
+    max-width: 30%;
   }
 }
-
 
 .block-info {
   padding: 0 1em;
 }
 .block-info ul {
-  list-style: none
+  list-style: none;
 }
 .block-info-sml {
   font-size: 14px;
-  text-align: center
+  text-align: center;
 }
 
 .section h2 {
-  border-bottom: 4px solid rgba(135,163,179,0.4);
+  border-bottom: 4px solid rgba(135, 163, 179, 0.4);
   width: 85%;
   text-align: left;
   padding-bottom: 5px;
-  text-shadow : 1px 2px 0 #fff;
+  text-shadow: 1px 2px 0 #fff;
 }
 .block-info img {
-  max-width:100%;
+  max-width: 100%;
 }
 
 .block-info--primary {
-
   background: #fff;
-  border: 2px solid rgba(135,163,179,0.4);
+  border: 2px solid rgba(135, 163, 179, 0.4);
   padding: 0 1em;
   /*margin: 20px;
   padding: 20px;*/
@@ -115,11 +107,11 @@
   text-align: center;
 }
 .block-info--primary ul {
-  list-style: none
+  list-style: none;
 }
 .sous-titre-h3 {
-  color:#777;
-  text-align: center
+  color: #777;
+  text-align: center;
 }
 
 /*
