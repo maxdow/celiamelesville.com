@@ -15,7 +15,9 @@ const container = document.getElementById("boutique-container")
 
 if (container) {
   if (process.env.NODE_ENV === "production") {
-    window.Raven.config("https://ec4ac1e9c76b4352b0d90e51db6afb27@sentry.io/151911").install()
+    if (window.Raven) {
+      window.Raven.config("https://ec4ac1e9c76b4352b0d90e51db6afb27@sentry.io/151911").install()
+    }
 
     ReactDOM.render(
       <Provider store={store}>
