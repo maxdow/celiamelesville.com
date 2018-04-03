@@ -91,24 +91,33 @@ const ImagesProduit = ({ imageIndex, images, nom, lang }) => (
   <div className="product-detail--image">
     <div className="product-img-container">
       <a href={"/images/boutique/" + images[imageIndex]}>
-        <img src={"/images/boutique/" + images[imageIndex]} alt={nom[lang]} draggable="false" />
+        <img
+          src={"/images/boutique/" + images[imageIndex]}
+          alt={nom[lang]}
+          draggable="false"
+        />
       </a>
     </div>
   </div>
 )
 
-const DetailsProduit = ({ nom, prix, description, onAdd, lang }) => (
+const DetailsProduit = ({ nom, prix, description, onAdd, lang, soldout }) => (
   <div className="product-detail--container">
     <h2 dangerouslySetInnerHTML={createMarkup(nom[lang])} />
     <div className="product-detail--prix">{prix.toFixed(2)} €</div>
     <div
       className="product-detail--description"
-      dangerouslySetInnerHTML={createMarkup(description ? description[lang] : nom[lang])}
+      dangerouslySetInnerHTML={createMarkup(
+        description ? description[lang] : nom[lang]
+      )}
     />
-
-    <Link to="/cart" className="buy-button" onClick={onAdd}>
-      {lang === "fr" ? "Ajouter au panier" : "Add to basket"}
-    </Link>
+    {soldout ? (
+      <h3>SOLD OUT</h3>
+    ) : (
+      <Link to="/cart" className="buy-button" onClick={onAdd}>
+        {lang === "fr" ? "Ajouter au panier" : "Add to basket"}
+      </Link>
+    )}
   </div>
 )
 
@@ -130,11 +139,20 @@ class Product extends Component {
       <div className="product-detail">
         <div style={{ display: "flex" }}>
           <ImagesProduit imageIndex={this.state.imageIndex} {...produit} />
-          <DetailsProduit onAdd={this.props.onAdd.bind(this, produit)} {...produit} lang={this.props.lang} />
+          <DetailsProduit
+            onAdd={this.props.onAdd.bind(this, produit)}
+            {...produit}
+            lang={this.props.lang}
+          />
         </div>
-        <ListImages {...produit} onImageSelect={this.selectionImage.bind(this)} />
+        <ListImages
+          {...produit}
+          onImageSelect={this.selectionImage.bind(this)}
+        />
         <Link to="/" style={{ textAlign: "right" }}>
-          {this.props.lang === "fr" ? "Retour à la boutique" : "Back to the shop"}
+          {this.props.lang === "fr"
+            ? "Retour à la boutique"
+            : "Back to the shop"}
         </Link>
       </div>
     )

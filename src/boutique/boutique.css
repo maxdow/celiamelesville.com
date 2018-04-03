@@ -125,6 +125,11 @@
 .product-detail--description {
   margin: 10px 0;
 }
+.product-detail--disclaimer {
+  background: rgba(255, 0, 0, 0.4);
+  padding: 0.5em;
+  border-radius: 1em;
+}
 
 .product-detail--container a {
   flex: 1 1 0;

@@ -4,7 +4,7 @@
   position: absolute;
   top: 0;
   right: 20%;
-  background: rgba(255,255,255,0.7);
+  background: rgba(255, 255, 255, 0.7);
 }
 
 .panier-liste {
@@ -13,8 +13,8 @@
 }
 .panier-total {
   margin-top: 4px;
-  padding : 2px;
-  border-top : 2px dashed #adadad;
+  padding: 2px;
+  border-top: 2px dashed #adadad;
   text-align: right;
 }
 /*.arrow-down {
@@ -26,8 +26,8 @@
 }*/
 
 .bigcart {
-  padding:10px;
-  flex:1 1 auto;
+  padding: 10px;
+  flex: 1 1 auto;
   position: relative;
   margin-bottom: 1em;
 }
@@ -44,22 +44,24 @@
 }
 
 .bigcart-table--produit {
-  border-bottom:1px solid #888;
-  margin:5px 0;
+  border-bottom: 1px solid #888;
+  margin: 5px 0;
 }
 
-.bigcart-table tfoot td{
+.bigcart-table tfoot td {
   border-top: 1px solid #aaa;
   padding-top: 2px;
 }
 .bigcart--image {
   max-width: 70px;
-  max-height: 85px
+  max-height: 85px;
 }
 .bigcart--nom {
   width: 250px;
 }
-.bigcart--q,.bigcart--q th,.bigcart--q input{
+.bigcart--q,
+.bigcart--q th,
+.bigcart--q input {
   max-width: 40px;
   text-align: center;
   padding: 4px;
@@ -83,11 +85,11 @@
 }
 
 .paypal-button {
-right: 0;
-position: absolute;
+  right: 0;
+  position: absolute;
 }
 .frais-port {
-  margin:5px 0;
+  margin: 5px 0;
 }
 .frais-port-block {
   list-style: none;
@@ -99,4 +101,9 @@ position: absolute;
   margin: 0 50%;
   width: 100px;
   display: block;
+}
+
+.cgv p {
+  padding: 0.2em;
+  line-height: 0;
 }

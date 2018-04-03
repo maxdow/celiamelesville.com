@@ -1,40 +1,11 @@
 const produits = [
   {
     nom: {
-      fr: "L'oracle des reflets",
-      en: "L'oracle des reflets"
+      fr: "L'oracle des reflets [ SOLD OUT ]",
+      en: "L'oracle des reflets [ SOLD OUT ]"
     },
     lien: "deck",
-    cat: {
-      fr: "Les Jeux",
-      en: "The Decks"
-    },
-    prix: 35,
-    poids: 300,
-    images: [
-      "jeu/boite.jpg",
-      "jeu/1.jpg",
-      "jeu/2.jpg",
-      "jeu/3.jpg",
-      "jeu/4.jpg",
-      "jeu/5.jpg",
-      "jeu/6.jpg",
-      "jeu/7.jpg",
-      "jeu/8.jpg"
-    ],
-    description: {
-      fr: `Un jeu de 57 cartes créé et illustré par Célia Melesville, accompagné d'un livret qui vous aidera dans vos débuts avec l'oracle.</br>
-    <p>Finitions : vernis mat , les cartes sont dorées sur la tranche. Boitier rigide.</p>`,
-      en: `A set of 57 cards created and illustrated by Celia Melesville, accompanied by a booklet that will help you get started with Oracle. </ Br>
-    <P> Finishes: matt varnish, the cards are golden on the edge. rigid case.`
-    }
-  },
-  {
-    nom: {
-      fr: "L'oracle des reflets <small>[numéroté signé] + marque page</small>",
-      en: "L'oracle des reflets <small>[signed and numbered] + bookmark</small>"
-    },
-    lien: "jeu-limite",
+    soldout: true,
     cat: {
       fr: "Les Jeux",
       en: "The Decks"
@@ -53,12 +24,59 @@ const produits = [
       "jeu/8.jpg"
     ],
     description: {
+      fr: `Un jeu de 57 cartes créé et illustré par Célia Melesville, accompagné d'un livret qui vous aidera dans vos débuts avec l'oracle.</br>
+    <p>Finitions : vernis mat , les cartes sont dorées sur la tranche. Boitier rigide.</p>
+    `,
+      en: `A set of 57 cards created and illustrated by Celia Melesville, accompanied by a booklet that will help you get started with Oracle. </ Br>
+    <P> Finishes: matt varnish, the cards are golden on the edge. rigid case.`
+    }
+  },
+  {
+    nom: {
+      fr: "L'oracle des reflets <strong>REBELLE</strong>",
+      en: "L'oracle des reflets <strong>REBEL</strong>"
+    },
+    lien: "jeu-limite",
+    cat: {
+      fr: "Les Jeux",
+      en: "The Decks"
+    },
+    prix: 22,
+    poids: 300,
+    images: [
+      "jeu/boite.jpg",
+      "jeu/1.jpg",
+      "jeu/2.jpg",
+      "jeu/3.jpg",
+      "jeu/4.jpg",
+      "jeu/5.jpg",
+      "jeu/6.jpg",
+      "jeu/7.jpg",
+      "jeu/8.jpg"
+    ],
+    description: {
       fr: `Un jeu de 57 cartes créé et illustré par Célia Melesville, accompagné d'un livret qui vous aidera dans vos débuts avec l'oracle.
     <p>Finitions : vernis mat , les cartes sont dorées sur la tranche. Boitier rigide.</p>
-    <p>Cette <strong> édition speciale contient un jeu numéroté et signé</strong> ainsi qu'un marque page</p>`,
+    <p>Cette <strong> édition speciale contient un jeu numéroté et signé</strong> ainsi qu'un marque page</p>
+    <div class="product-detail--disclaimer">
+    <p>La version rebelle est une version de l'oracle des reflets <strong>AVEC DES DEFAUTS</strong></p>
+
+    <p>Des défauts d'imprimerie se sont glissés dans ces jeux tel que des problèmes de marge, de dorure, de découpe...
+    Il peut être un jeu idéal pour les personnes qui n'ont pas peur de découper les bordures ou qui souhaites tout de même travailler avec le jeu à moindre coûts.</p>
+
+    <p><strong>ATTENTION si vous achetez ce jeu, vous acceptez ces défauts et vous ne pourrez pas le retourner ou demander un remboursement!</strong></p>
+    </div>
+    `,
       en: `A set of 57 cards created and illustrated by Celia Melesville, accompanied by a booklet that will help you get started with Oracle. </ Br>
     <p> Finishes: matt varnish, the cards are golden on the edge. rigid case.
-    <p>This <strong> special edition includes a numbered and signed deck</strong> along with a bookmark</p>`
+    <p>This <strong> special edition includes a numbered and signed deck</strong> along with a bookmark</p>
+<div class="product-detail--disclaimer">
+    <p>The rebel version is a version <strong> WITH DEFECTS </strong></p>
+ <p>Printing defects have crept into these decks such as problems of margin, gilding, cutting ...
+ It can be an ideal deck for people who are not afraid to cut edges or who still want to work with the deck at a lower cost.</p>
+ <p><strong> WARNING: If you buy this game, you accept these defects and you will not be able to return it or request a refund! </strong></p>
+</div>
+    `
     }
   },
   {
