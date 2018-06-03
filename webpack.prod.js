@@ -22,7 +22,11 @@ module.exports = {
         NODE_ENV: JSON.stringify("production")
       }
     }),
-    new ExtractTextPlugin({ filename: "bundle.css", disable: false, allChunks: true }),
+    new ExtractTextPlugin({
+      filename: "bundle." + version + ".css",
+      disable: false,
+      allChunks: true
+    }),
     new HtmlWebpackPlugin({
       inject: false,
       template: "./src/index.hbs"

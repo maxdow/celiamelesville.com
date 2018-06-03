@@ -57,7 +57,7 @@ const produits = [
     description: {
       fr: `Un jeu de 57 cartes créé et illustré par Célia Melesville, accompagné d'un livret qui vous aidera dans vos débuts avec l'oracle.
     <p>Finitions : vernis mat , les cartes sont dorées sur la tranche. Boitier rigide.</p>
-    <p>Cette <strong> édition speciale contient un jeu numéroté et signé</strong> ainsi qu'un marque page</p>
+
     <div class="product-detail--disclaimer">
     <p>La version rebelle est une version de l'oracle des reflets <strong>AVEC DES DEFAUTS</strong></p>
 
@@ -69,7 +69,7 @@ const produits = [
     `,
       en: `A set of 57 cards created and illustrated by Celia Melesville, accompanied by a booklet that will help you get started with Oracle. </ Br>
     <p> Finishes: matt varnish, the cards are golden on the edge. rigid case.
-    <p>This <strong> special edition includes a numbered and signed deck</strong> along with a bookmark</p>
+
 <div class="product-detail--disclaimer">
     <p>The rebel version is a version <strong> WITH DEFECTS </strong></p>
  <p>Printing defects have crept into these decks such as problems of margin, gilding, cutting ...
