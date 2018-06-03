@@ -1,14 +1,13 @@
-import React, { Component } from "react";
-import { Link } from "react-router";
-import { connect} from "react-redux";
+import React, { Component } from "react"
+import { Link } from "react-router"
+import { connect } from "react-redux"
 
 //import Produit from "./produit"
 
-import produits from "../produits";
-
+import produits from "../produits"
 
 function createMarkup(markup) {
-  return {__html: markup};
+  return { __html: markup }
 }
 
 /*
@@ -26,53 +25,53 @@ const getCategories = (produits,langue) => {
     return categories ;
 }*/
 
-const getCategories = (produits,langue) => {
-
-    return produits.reduce((acc,item) => {
-      if(!acc[item.cat[langue]]) {
-        acc[item.cat[langue]] = []
-      }
-      acc[item.cat[langue]].push(item)
-      return acc
-    },{});
+const getCategories = (produits, langue) => {
+  return produits.reduce((acc, item) => {
+    if (!acc[item.cat[langue]]) {
+      acc[item.cat[langue]] = []
+    }
+    acc[item.cat[langue]].push(item)
+    return acc
+  }, {})
 }
 
-const Produit = ({nom, images, prix,lien,lang}) => {
-  nom = nom[lang];
+const Produit = ({ nom, images, prix, lien, lang, soldout }) => {
+  nom = nom[lang]
   return (
-  <figure className="boutique-item">
-    <Link to={"/produit/"+lien}>
-      <img src={"/images/boutique/"+images[0]} alt={nom}/>
+    <figure className={"boutique-item " + (soldout ? "soldout-grey" : "")}>
+      <Link to={"/produit/" + lien}>
+        <img src={"/images/boutique/" + images[0]} alt={nom} />
 
-      <figcaption className="boutique-item-description">
-        <p className="boutique-item-titre" dangerouslySetInnerHTML={createMarkup(nom)}></p>
-        <p className="boutique-item-prix">{prix.toFixed(2) + "€"}</p>
-      </figcaption>
-    </Link>
-  </figure>
+        <figcaption className="boutique-item-description">
+          <p
+            className="boutique-item-titre"
+            dangerouslySetInnerHTML={createMarkup(nom)}
+          />
+          <p className="boutique-item-prix">{prix.toFixed(2) + "€"}</p>
+        </figcaption>
+      </Link>
+    </figure>
   )
 }
 
-
-
-const ProductListComponent = ({categories,lang}) => (
-
+const ProductListComponent = ({ categories, lang }) => (
   <div className="boutique">
-          {Object.keys(categories).map(function(categorie){
-            return <div key={categorie}>
-              <h2>{categorie}</h2>
-              <div className="boutique-categorie">{
-                categories[categorie].map((dataProduit,i) => <Produit lang={lang} {...dataProduit} key={i}/>)
-              }</div>
-              </div>;
-          })}
-
+    {Object.keys(categories).map(function(categorie) {
+      return (
+        <div key={categorie}>
+          <h2>{categorie}</h2>
+          <div className="boutique-categorie">
+            {categories[categorie].map((dataProduit, i) => (
+              <Produit lang={lang} {...dataProduit} key={i} />
+            ))}
+          </div>
+        </div>
+      )
+    })}
   </div>
-
 )
 
-
-export default connect(({lang})=>({
+export default connect(({ lang }) => ({
   lang,
-  categories : getCategories(produits,lang)
-}))(ProductListComponent);
+  categories: getCategories(produits, lang)
+}))(ProductListComponent)
