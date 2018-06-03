@@ -81,6 +81,20 @@ const produits = [
   },
   {
     nom: {
+      fr: "Lili Black & Lili White Tarots",
+      en: "Lili Black & Lili White Tarots"
+    },
+    lien: "jeu-lili",
+    cat: {
+      fr: "Les Jeux",
+      en: "The Decks"
+    },
+    prix: 56,
+
+    images: ["lili/4.jpg"]
+  },
+  {
+    nom: {
       fr: "Tanis Lenormand",
       en: "Tanis Lenormand"
     },

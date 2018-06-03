@@ -3,6 +3,7 @@ import { connect } from "react-redux"
 
 import produits from "../produits"
 import { Link } from "react-router"
+import { DetailsProduitLili } from "./produit-details-lili"
 
 function createMarkup(markup) {
   return { __html: markup }
@@ -139,11 +140,18 @@ class Product extends Component {
       <div className="product-detail">
         <div style={{ display: "flex" }}>
           <ImagesProduit imageIndex={this.state.imageIndex} {...produit} />
-          <DetailsProduit
-            onAdd={this.props.onAdd.bind(this, produit)}
-            {...produit}
-            lang={this.props.lang}
-          />
+          {produit.lien === "jeu-lili" ? (
+            <DetailsProduitLili
+              onAdd={this.props.onAdd}
+              lang={this.props.lang}
+            />
+          ) : (
+            <DetailsProduit
+              onAdd={this.props.onAdd.bind(this, produit)}
+              {...produit}
+              lang={this.props.lang}
+            />
+          )}
         </div>
         <ListImages
           {...produit}
