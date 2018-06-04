@@ -44,18 +44,18 @@ const produits = [
   {
     nom: {
       fr: "Tarot Lili White",
-      en: "Lili Black Tarot"
+      en: "Lili White Tarot"
     },
-    images: ["lili/4.jpg"],
+    images: ["lili/liliw.jpg"],
     prix: 56,
     poids: 330
   },
   {
     nom: {
       fr: "Tarot Lili Black",
-      en: "Lili White Tarot"
+      en: "Lili Black Tarot"
     },
-    images: ["lili/4.jpg"],
+    images: ["lili/lilib.jpg"],
     prix: 56,
     poids: 330
   },
@@ -64,7 +64,7 @@ const produits = [
       fr: "Tarots Lili Black & Lili White",
       en: "Lili Black & Lili White Decks"
     },
-    images: ["lili/4.jpg"],
+    images: ["lili/2decks.jpg"],
     prix: 105,
     poids: 660
   },
@@ -73,7 +73,7 @@ const produits = [
       fr: "Livre seul",
       en: "Book Only"
     },
-    images: ["lili/4.jpg"],
+    images: ["lili/book.jpg"],
     prix: 12,
     poids: 210
   },
@@ -83,7 +83,7 @@ const produits = [
       fr: "Livre + 1 Deck Lili Black",
       en: "Book + 1 Deck Lili Black"
     },
-    images: ["lili/4.jpg"],
+    images: ["lili/bbook.jpg"],
     prix: 65,
     poids: 560
   },
@@ -92,7 +92,7 @@ const produits = [
       fr: "Livre + 1 Deck Lili White",
       en: "Book + 1 Deck Lili White"
     },
-    images: ["lili/4.jpg"],
+    images: ["lili/wbook.jpg"],
     prix: 65,
     poids: 560
   },
@@ -101,7 +101,7 @@ const produits = [
       fr: "Livre + Tarots Lili Black & Lili White",
       en: "Book + Lili Black & Lili White Decks"
     },
-    images: ["lili/4.jpg"],
+    images: ["lili/2decksbook.jpg"],
     prix: 115,
     poids: 860
   }
@@ -112,7 +112,7 @@ const Item = ({ produit, lang, onClick }) => {
   return (
     <Link to="/cart">
       <figure
-        style={{ minWidth: 150, display: "inline-block" }}
+        style={{ minWidth: 150, height: 150, display: "inline-block" }}
         className="boutique-item"
         onClick={() => {
           onClick(produit)
