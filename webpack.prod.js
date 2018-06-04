@@ -42,6 +42,10 @@ module.exports = {
       filename: "tanis-lenormand/index.html"
     }),
     new HtmlWebpackPlugin({
+      template: "./src/liliwhite-liliblack/index.hbs",
+      filename: "liliwhite-liliblack/index.html"
+    }),
+    new HtmlWebpackPlugin({
       inject: true,
       template: "./src/boutique/index.hbs",
       filename: "boutique/index.html"

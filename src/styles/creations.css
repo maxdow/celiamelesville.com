@@ -1,5 +1,5 @@
 .carte-container {
-  display: flex;
+  display: block;
   justify-content: center;
 }
 
@@ -12,8 +12,8 @@
   width: 161px;
   height: 268px;
   /*border: 1px solid #ddd;*/
-  margin:2.5em;
+  margin: 2.5em;
 }
 .carte-container > div:hover {
-  color : #a7a0ba
+  color: #a7a0ba;
 }
