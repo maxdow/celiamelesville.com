@@ -193,6 +193,10 @@ class BigCart extends Component {
       portType: event.target.value
     })
   }
+  handleClearCart() {
+    this.props.onClear()
+  }
+
   render() {
     const { panier, onAdd, onRemove, onDelete, locales, lang } = this.props
     const total = totalPanier(panier, this.state.portType)
@@ -207,7 +211,16 @@ class BigCart extends Component {
           lang={lang}
           locales={locales}
         />
-        <Link to="/">{this.props.locales.continuer}</Link>
+        <div style={{ display: "flex" }}>
+          <Link to="/">{this.props.locales.continuer}</Link>
+          <button
+            style={{ marginLeft: "auto" }}
+            className="button"
+            onClick={this.handleClearCart.bind(this)}
+          >
+            {this.props.locales.vider}
+          </button>
+        </div>
         <FraisPort
           portType={this.state.portType}
           onChoixPort={this.handleChoixPort.bind(this)}
@@ -242,6 +255,10 @@ function mapDispatchToProps(dispatch) {
       dispatch({
         type: "DELETE",
         item
+      }),
+    onClear: item =>
+      dispatch({
+        type: "CLEAR"
       })
   }
 }
@@ -254,4 +271,7 @@ function mapStateToProps({ lang, panier }) {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(BigCart)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(BigCart)

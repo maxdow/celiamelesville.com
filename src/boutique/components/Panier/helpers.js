@@ -3,7 +3,7 @@ import { calculFraisPort } from "../../fraisport"
 const liliPresent = (panier = []) =>
   panier.some(produit => produit.nom.fr.includes("Lili"))
 
-export function totalPanier(panier, typePort) {
+export function totalPanier(panier = [], typePort) {
   const tmp = panier.reduce(
     function(acc, item) {
       acc.totalPrix = acc.totalPrix + item.quantite * item.prix

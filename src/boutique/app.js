@@ -1,13 +1,11 @@
-import React from "react";
+import React from "react"
 import { Router, Route, hashHistory } from "react-router"
-
 
 import ListeProduits from "./components/liste-produits"
 import ProduitDetail from "./components/produit-detail"
 import Panier from "./components/Panier/"
 import I18n from "./components/i18n"
 import "./boutique.css"
-
 
 const Boutique = () => (
   <Router history={hashHistory}>
@@ -17,10 +15,12 @@ const Boutique = () => (
   </Router>
 )
 
-const App = () => (
+const App = ({ lang }) => (
   <div>
-      <I18n />
-      <Boutique />
+    <I18n />
+
+    <Boutique />
   </div>
 )
+
 export default App

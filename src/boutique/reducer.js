@@ -86,7 +86,9 @@ export default function rootReducer(state = defaultState, action) {
     case "DELETE":
       panier = panier.filter(item => item.lien !== action.item.lien)
       break
-
+    case "CLEAR":
+      panier = []
+      break
     case "LANG":
       lang = action.lang
       break

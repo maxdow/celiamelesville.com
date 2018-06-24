@@ -37,7 +37,7 @@ const portStandard = [
 ]
 
 const limitePoids = [20, 50, 100, 250, 500, 1000, 2000]
-const limitePoidsLili = [500, 750, 1000, 2000]
+const limitePoidsLili = [500, 750, 1000, 2000, 5000, 10000, 50000]
 
 const portLili = [
   {
@@ -59,6 +59,21 @@ const portLili = [
     fr: 9,
     eu: 19.5,
     ww: 27
+  },
+  {
+    fr: 15.5,
+    eu: 25,
+    ww: 61
+  },
+  {
+    fr: 22,
+    eu: 40.5,
+    ww: 115
+  },
+  {
+    fr: 31.5,
+    eu: 67,
+    ww: 184
   }
 ]
 
@@ -70,10 +85,11 @@ export function calculFraisPort(poids, typePort, lilipresent) {
     poids = 900
   }
 
-  for (var i = 0; i < typeLimite.length; i++) {
+  for (var i = 0; i < typeLimite.length - 1; i++) {
     if (poids < typeLimite[i]) {
       break
     }
   }
+  // console.log({ poids, typeLimite, listePrix, i })
   return listePrix[i][typePort]
 }

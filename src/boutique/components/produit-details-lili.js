@@ -37,6 +37,7 @@ const descriptionEn = `
 
 const produits = [
   {
+    lien: "liliw",
     nom: {
       fr: "Tarot Lili White",
       en: "Lili White Tarot"
@@ -46,6 +47,8 @@ const produits = [
     poids: 330
   },
   {
+    lien: "lilib",
+
     nom: {
       fr: "Tarot Lili Black",
       en: "Lili Black Tarot"
@@ -55,6 +58,7 @@ const produits = [
     poids: 330
   },
   {
+    lien: "liliwb",
     nom: {
       fr: "Tarots Lili Black & Lili White",
       en: "Lili Black & Lili White Decks"
@@ -64,6 +68,8 @@ const produits = [
     poids: 660
   },
   {
+    lien: "lilibook",
+
     nom: {
       fr: "Livre seul",
       en: "Book Only"
@@ -74,6 +80,8 @@ const produits = [
   },
 
   {
+    lien: "lilibookb",
+
     nom: {
       fr: "Livre + 1 Deck Lili Black",
       en: "Book + 1 Deck Lili Black"
@@ -83,6 +91,8 @@ const produits = [
     poids: 560
   },
   {
+    lien: "lilibookw",
+
     nom: {
       fr: "Livre + 1 Deck Lili White",
       en: "Book + 1 Deck Lili White"
@@ -92,6 +102,8 @@ const produits = [
     poids: 560
   },
   {
+    lien: "lilibookwb",
+
     nom: {
       fr: "Livre + Tarots Lili Black & Lili White",
       en: "Book + Lili Black & Lili White Decks"
@@ -132,7 +144,7 @@ export class DetailsProduitLili extends Component {
     const { onAdd, lang } = this.props
     return (
       <div className="product-detail--container">
-        <h2>Lili Black & Lili White Tarots</h2>
+        <h2>Tarots Lili Black & Lili White</h2>
         {/* <div className="product-detail--prix">{prix.toFixed(2)} €</div> */}
         <div
           className="product-detail--description"

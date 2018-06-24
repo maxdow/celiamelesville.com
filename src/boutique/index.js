@@ -1,7 +1,12 @@
 import React from "react"
 import ReactDOM from "react-dom"
 //import { Router, Route, IndexRoute, browserHistory} from "react-router";
-import { createStore } from "redux"
+import { createStore, compose } from "redux"
+
+import persistState, { mergePersistedState } from "redux-localstorage"
+import adapter from "redux-localstorage/lib/adapters/localStorage"
+// import filter from "redux-localstorage-filter"
+
 import { Provider } from "react-redux"
 
 import { AppContainer } from "react-hot-loader"
@@ -10,13 +15,19 @@ import rootReducer from "./reducer"
 
 import Boutique from "./app"
 
-const store = createStore(rootReducer)
+const reducer = compose(mergePersistedState())(rootReducer)
+const storage = compose()(adapter(window.sessionStorage))
+
+const store = createStore(reducer, persistState(storage))
+// const store = createStore(rootReducer)
 const container = document.getElementById("boutique-container")
 
 if (container) {
   if (process.env.NODE_ENV === "production") {
     if (window.Raven) {
-      window.Raven.config("https://ec4ac1e9c76b4352b0d90e51db6afb27@sentry.io/151911").install()
+      window.Raven.config(
+        "https://ec4ac1e9c76b4352b0d90e51db6afb27@sentry.io/151911"
+      ).install()
     }
 
     ReactDOM.render(
@@ -47,7 +58,7 @@ if (container) {
     }
   }
 }
-const load = document.getElementsByClassName("cs-loader")[0]
-if (load) {
-  load.style.display = "none"
+const loadSpin = document.getElementsByClassName("cs-loader")[0]
+if (loadSpin) {
+  loadSpin.style.display = "none"
 }

@@ -9,6 +9,7 @@ const locales = {
     destination: "à destination de",
     continuer: "Continuer mes achats",
     autre: "Autre",
+    vider: "Vider le panier",
     accept: "Accepter",
     CGVtitle: "C G V",
     CGV: `
@@ -23,6 +24,7 @@ const locales = {
     monpanier: "My Cart",
     prix: "Price",
     qty: "Quantity",
+    vider: "Empty Cart",
     port: "Shipping",
     fraisdeport: "shipping",
     destination: "to",

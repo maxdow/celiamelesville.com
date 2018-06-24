@@ -53,21 +53,27 @@ const Produit = ({ nom, images, prix, lien, lang, soldout }) => {
     </figure>
   )
 }
-
+const styleCart = {}
 const ProductListComponent = ({ categories, lang }) => (
-  <div className="boutique">
-    {Object.keys(categories).map(function(categorie) {
-      return (
-        <div key={categorie}>
-          <h2>{categorie}</h2>
-          <div className="boutique-categorie">
-            {categories[categorie].map((dataProduit, i) => (
-              <Produit lang={lang} {...dataProduit} key={i} />
-            ))}
+  <div style={{ position: "relative" }}>
+    <Link style={{ right: 0, position: "absolute" }} to="/cart">
+      🛒
+      {lang === "fr" ? "Mon panier" : "My Cart"}
+    </Link>
+    <div className="boutique">
+      {Object.keys(categories).map(function(categorie) {
+        return (
+          <div key={categorie}>
+            <h2>{categorie}</h2>
+            <div className="boutique-categorie">
+              {categories[categorie].map((dataProduit, i) => (
+                <Produit lang={lang} {...dataProduit} key={i} />
+              ))}
+            </div>
           </div>
-        </div>
-      )
-    })}
+        )
+      })}
+    </div>
   </div>
 )
 

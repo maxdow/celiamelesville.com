@@ -169,11 +169,12 @@ class Product extends Component {
 
 function mapDispatchToProps(dispatch) {
   return {
-    onAdd: item =>
-      dispatch({
+    onAdd: item => {
+      return dispatch({
         type: "ADD",
         item
       })
+    }
   }
 }
 
