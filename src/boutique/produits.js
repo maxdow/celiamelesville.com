@@ -13,7 +13,7 @@ const produits = [
     prix: 37,
     poids: 300,
     images: [
-      "jeu/boite.jpg",
+      "jeu/boite2.jpg",
       "jeu/1.jpg",
       "jeu/2.jpg",
       "jeu/3.jpg",
