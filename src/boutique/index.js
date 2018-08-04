@@ -12,7 +12,7 @@ import { Provider } from "react-redux"
 import { AppContainer } from "react-hot-loader"
 
 import rootReducer from "./reducer"
-
+import "./polyfills"
 import Boutique from "./app"
 
 const reducer = compose(mergePersistedState())(rootReducer)
