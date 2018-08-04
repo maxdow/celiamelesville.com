@@ -1,6 +1,6 @@
 const defaultState = {
   panier: [],
-  lang: navigator.language === "fr" ? "fr" : "en"
+  lang: navigator.languages.includes("fr") ? "fr" : "en"
 }
 
 // https://tc39.github.io/ecma262/#sec-array.prototype.findIndex

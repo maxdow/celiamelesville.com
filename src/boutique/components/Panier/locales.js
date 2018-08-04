@@ -16,7 +16,6 @@ const locales = {
     <p>Les jeux sont envoyés en lettre suivi.</p>
     <p>Si votre suivi est indiqué comme livré par la poste, vous ne pouvez pas demander un remboursement ou un renvoie du jeu.</p>
     <p>En cas d'autres problèmes avec les envois, merci de contacter en priorité votre bureau de poste.</p>
-    <p>Vous acceptez la version "rebelle" de l'Oracle des reflets avec ses défauts. Le jeu ne peut être ni remboursé ni renvoyé</p>
     `
   },
   en: {
@@ -37,7 +36,6 @@ const locales = {
     <p>The decks are sent with tracking.</p>
     <p>If your tracking is indicated as delivered, you can not request a refund or return of the game.</p>
     <p>In case of other problems with shipments, please contact your post office first.</p>
-    <p>You accept the "rebel" version of l'Oracle des reflets with its defects. There is no return or refunds for this version.</p>
     `
   }
 }

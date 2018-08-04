@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import ReactDOM from "react-dom"
 import { connect } from "react-redux"
 import { Link } from "react-router"
 
@@ -29,8 +30,12 @@ const BoutonPaypal = function({ panier, prixProduits, port, lang }) {
       <div className="hide" id="errorBox" />
       <input type="hidden" name="button" value="buynow" />
       <input type="hidden" name="cmd" value="_xclick" />
+      <input
+        TYPE="hidden"
+        NAME="return"
+        value="https://celiamelesville.com/thanks"
+      />
       <input type="hidden" name="currency_code" value="EUR" />
-      <input type="hidden" name="return" value="oracledesreflets.com" />
       <input type="hidden" name="no_shipping" value="2" />
       <input type="hidden" name="shipping" value={port} />
       <input type="hidden" name="item_name" value={textpanier} />
