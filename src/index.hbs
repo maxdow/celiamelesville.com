@@ -1,27 +1,14 @@
 {{> header title='Celia Melesville'}}
 
 <style>
-  img {
-    float: left;
-    margin: 30px
-  }
-
-  @media all and (max-width: 550px) {
-    img {
-      display: block;
-      float: none;
-      margin: 0;
-      max-width: 100%;
-    }
-  }
-
   .menu {
     display: none
   }
 
   img.rounded {
     border-radius: 50%;
-    margin: 1em 0
+    margin: 1em 0;
+    object-fit: cover;
   }
 
   .container.section {
@@ -30,29 +17,10 @@
     padding: 0
   }
 
-  @media screen and (max-width: 922px) {
-    img.rounded {
-      display: none
-    }
-
-  }
-
-  @media screen and (max-width: 700px) {
-
-    .container.section {
-      flex-direction: column;
-    }
-  }
-
-  .buttoncontain {
-    margin-top: 1em;
-    flex: 1 1 0
-  }
-
   .bigbutton {
     display: block;
     padding: 1em 2em;
-    margin: 1em;
+    margin: auto 1em;
     letter-spacing: 1px;
     font-weight: 700;
     cursor: pointer;
@@ -62,13 +30,53 @@
     color: #fff;
     background: #c1bad4;
     text-align: center;
-    transition: all 0.2s;
+    transition: all 0.3s;
+    border-radius: 1em;
+    text-decoration: none;
+  }
+
+  .buttoncontain {
+    margin-top: 1em;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column
+  }
+
+  .bigbutton-pad {
+    padding: 1em 0;
   }
 
   .bigbutton:hover {
     background: #a7a0ba;
     border: 3px solid #706b7c;
+  }
 
+  .img-middle {
+    display: block
+  }
+
+  .img-bottom {
+    display: none;
+    margin: auto
+  }
+
+  @media screen and (max-width: 922px) {
+
+    .bigbutton {
+      margin: 0.5em;
+    }
+    .buttoncontain {
+      margin: 0
+    }
+    .container.section {
+      flex-direction: column;
+    }
+    .img-middle {
+      display: none
+    }
+    .img-bottom {
+      display: flex
+    }
   }
 </style>
 
@@ -81,27 +89,31 @@
       <section class="container section ">
         <div class="buttoncontain">
 
-          <a href="/consultations" class="bigbutton">
+
+          <a href="/formation-tarot" class="bigbutton bigbutton-pad">
+            Formation Tarot
+          </a>
+          <a href="/consultations" class="bigbutton bigbutton-pad">
             Consultations
           </a>
-          <a href="/creations" class="bigbutton">
-            Mes Jeux
-          </a>
+
 
         </div>
-        <div style="flex:0 1 auto">
+        <div class="img-middle" style="flex:0 1 auto">
           <img class="rounded" src="assets/profil.jpg" width="400" height="319">
         </div>
 
         <div class="buttoncontain">
-
-          <a href="/formation-tarot" class="bigbutton">
-            Formation
+          <a href="/creations" class="bigbutton">
+            Mes Jeux
           </a>
 
           <a href="/boutique" class="bigbutton">
             Boutique
           </a>
+        </div>
+        <div class="img-bottom">
+          <img class="rounded" src="assets/profil.jpg" width="400" height="319">
         </div>
     </div>
     </section>
