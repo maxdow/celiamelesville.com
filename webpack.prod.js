@@ -38,6 +38,18 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       inject: false,
+
+      template: "./src/formation-tarot/index.hbs",
+      filename: "formation-tarot/index.html"
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+
+      template: "./src/a-propos/index.hbs",
+      filename: "a-propos/index.html"
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
       template: "./src/tanis-lenormand/index.hbs",
       filename: "tanis-lenormand/index.html"
     }),
@@ -76,12 +88,12 @@ module.exports = {
     }),
     new webpack.optimize.ModuleConcatenationPlugin(),
     new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: true,
-        dead_code: true,
-        conditionals: true,
-        unused: true
-      }
+      // compress: {
+      //   // warnings: true,
+      //   dead_code: true,
+      //   // conditionals: true,
+      //   unused: true
+      // }
     })
   ],
 

@@ -38,6 +38,14 @@ module.exports = {
       filename: "creations/index.html"
     }),
     new HtmlWebpackPlugin({
+      template: "./src/formation-tarot/index.hbs",
+      filename: "formation-tarot/index.html"
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/a-propos/index.hbs",
+      filename: "a-propos/index.html"
+    }),
+    new HtmlWebpackPlugin({
       template: "./src/tanis-lenormand/index.hbs",
       filename: "tanis-lenormand/index.html"
     }),
