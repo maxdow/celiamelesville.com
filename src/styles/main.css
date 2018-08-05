@@ -4,19 +4,17 @@ html {
 
 @import url(https://fonts.googleapis.com/css?family=Lato|Calligraffitti|Ruthie);
 
-
-body{
-
-  background-image: url("../assets/fond3.jpg") ;
-  background-size:cover;
+body {
+  background-image: url("../assets/fond3.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
   padding: 0;
   margin: 0;
-  font-size : 0.9em;
+  font-size: 0.9em;
 }
 
-
-h2 , h3{
+h2,
+h3 {
   text-align: center;
 }
 h4 {
@@ -27,24 +25,26 @@ ul {
   padding: 0;
 }
 ul li {
-  margin : 3px 0 0;
+  margin: 3px 0 0;
 }
 
 .wrapper {
   width: auto;
   max-width: 1200px;
   margin: 0 auto;
-
 }
 
-
 .container {
-  border:2px solid #fff;
-  border-top : 5px solid #fff;
-  padding:10px;
+  border: 2px solid #fff;
+  border-top: 5px solid #fff;
+  padding: 10px;
   /*display: flex;*/
   /*flex-direction: column;*/
   flex: 1;
   width: 100%;
 }
 
+.main {
+  max-width: 1200px;
+  margin: auto;
+}

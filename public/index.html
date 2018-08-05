@@ -14,17 +14,76 @@
 
 </head>
 <style>
-  img {
-    float: left;
-    margin: 30px
+  .menu {
+    display: none
   }
 
-  @media all and (max-width: 550px) {
-    img {
-      display: block;
-      float: none;
-      margin: 0;
-      max-width: 100%;
+  img.rounded {
+    border-radius: 50%;
+    margin: 1em 0
+  }
+
+  .container.section {
+    display: flex;
+    flex-direction: row;
+    padding: 0
+  }
+
+  .bigbutton {
+    display: block;
+    padding: 1em 2em;
+    margin: auto 1em;
+    letter-spacing: 1px;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    font-size: 1.5em;
+    border: 3px solid #a7a0ba;
+    color: #fff;
+    background: #c1bad4;
+    text-align: center;
+    transition: all 0.3s;
+    border-radius: 1em;
+    text-decoration: none;
+  }
+
+  .buttoncontain {
+    margin-top: 1em;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column
+  }
+
+  .bigbutton:hover {
+    background: #a7a0ba;
+    border: 3px solid #706b7c;
+  }
+
+  .img-middle {
+    display: block
+  }
+
+  .img-bottom {
+    display: none;
+    margin: auto
+  }
+
+  @media screen and (max-width: 922px) {
+
+    .bigbutton {
+      margin: 0.5em;
+    }
+    .buttoncontain {
+      margin: 0
+    }
+    .container.section {
+      flex-direction: column;
+    }
+    .img-middle {
+      display: none
+    }
+    .img-bottom {
+      display: flex
     }
   }
 </style>
@@ -35,11 +94,17 @@
     <div class="header">
       <div class="top-header">
     
-        <h1 class="site-title"><a href="/">Celia Melesville</a></h1>
+        <h1 class="site-title">
+          <a href="/">Celia Melesville</a>
+        </h1>
     
         <div class="social">
-          <a href="https://www.facebook.com/cartesetconscience/"><img src="https://celiamelesville.com/assets/facebook.png" alt=""></a>
-          <a href="https://www.youtube.com/channel/UCxYXOEYpeeW0ye8OVrXcR0g"><img src="https://celiamelesville.com/assets/youtube.png" alt=""></a>
+          <a href="https://www.facebook.com/cartesetconscience/">
+            <img src="https://celiamelesville.com/assets/facebook.png" alt="">
+          </a>
+          <a href="https://www.youtube.com/channel/UCxYXOEYpeeW0ye8OVrXcR0g">
+            <img src="https://celiamelesville.com/assets/youtube.png" alt="">
+          </a>
         </div>
     
         <h3 class="soustitre">
@@ -51,81 +116,66 @@
     
       <nav class="menu">
         <ul>
-          <li><a href="/">A Propos</a></li>
-          <li><a href="/consultations">Consultations</a>
-              <ul class="sous-menu">
-                <li><a href="/therapie">Thérapie</a></li>
-                <li><a href="/guidance">Cartomancie - Guidance</a></li>
-              </ul>
+          <li>
+            <a href="/">A Propos</a>
           </li>
-          <li><a href="/creations">Créations</a></li>
-          <li><a href="/boutique">Boutique</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li>
+            <a href="/consultations">Consultations</a>
+            <ul class="sous-menu">
+              <li>
+                <a href="/therapie">Thérapie</a>
+              </li>
+              <li>
+                <a href="/guidance">Cartomancie - Guidance</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="/creations">Créations</a>
+          </li>
+          <li>
+            <a href="/boutique">Boutique</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
     
-      </ul>
-    </nav>
+        </ul>
+      </nav>
     
     </div>
-
     <div class="main">
+      <section class="container section ">
+        <div class="buttoncontain">
 
-      <section class="container section">
-        <h1>Qui suis-je</h1>
+          <a href="/consultations" class="bigbutton">
+            Consultations
+          </a>
 
-
-        <img src="assets/profil.jpg" width="400">
-
-        <p>Artiste, auteure, thérapeute et cartomancienne, des savoirs-faires qui s'entremêlent au gré de mes inspirations et
-          donnent naissance, d'un coup de pinceau, à des oracles et des tarots.</p>
-
-
-        <p>Des années à illustrer et à écrire des récits pour enfants m'ont permis de peaufiner mon style artistique et aujourd'hui
-          <strong>j'ai à cœur d'imprégner mon travail de la symbolique et la spiritualité</strong> qui me tiennent tant à
-          cœur.</p>
-
-        <p>Ainsi à la base de chaque texte et illustration se trouve la graine de l'intuition, que j'écoute attentivement afin
-          de tracer aux plus justes les messages qui me sont apportés.
-        </p>
-
-        <p>Je me suis également <strong>formée à diverses techniques thérapeutiques</strong> (Thérapie familiale et conjugale
-          – Art thérapie) ainsi que de <strong>développement personnel et spirituel</strong> et parce que la vie est un long
-          chemin, je continue à apprendre, afin de toujours faire évoluer mon regard sur le monde qui m'entoure et forger
-          mon écoute bienveillante.</p>
-
-        <p>Je vous invite à partager ma passion des cartes et du développement personnel au travers de <a href="https://www.youtube.com/channel/UCxYXOEYpeeW0ye8OVrXcR0g"> ma
-    chaîne Youtube</a></p>
-
-        <p>Actuellement <strong>j'exerce en tant que thérapeute</strong> et propose également des tirages de cartomancie ou
-          de guidance à distance ou dans mon cabinet à Toulouse.</p>
-
-
-        <div class="side-container">
-          <div>
-            <h2>Mes ressources</h2>
-            <ul style="margin-left: 1em">
-              <li>Licence d'art plastique</li>
-              <li>Diplôme de thérapeute familial et conjugal</li>
-              <li>7 années de travail dans l'univers de l'enfance en tant qu’illustratrice et auteur jeunesse</li>
-              <li>15 années de travail sur le symbolisme et la tarologie</li>
-              <li>En 2016 ouverture de son cabinet de thérapie et de guidance</li>
-            </ul>
-          </div>
-
-          <div>
-            <h2>Mes Tarots / Oracles</h2>
-            <ul style="margin-left: 1em">
-              <li>2015 : Publication de l'Oracle des reflets.</li>
-              <li>2017 : Publication du Tanis Lenormand.</li>
-            </ul>
-          </div>
+          <a href="/creations" class="bigbutton">
+            Mes Jeux
+          </a>
 
         </div>
-      </section>
+        <div class="img-middle" style="flex:0 1 auto">
+          <img class="rounded" src="assets/profil.jpg" width="400" height="319">
+        </div>
 
+        <div class="buttoncontain">
 
+          <a href="/formation-tarot" class="bigbutton">
+            Formation
+          </a>
 
+          <a href="/boutique" class="bigbutton">
+            Boutique
+          </a>
+        </div>
+        <div class="img-bottom">
+          <img class="rounded" src="assets/profil.jpg" width="400" height="319">
+        </div>
     </div>
-
+    </section>
   </div>
   <div class="footer">
     Conçu dans le <a href="https://maxlab.fr">Maxlab</a></div>
