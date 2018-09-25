@@ -62,14 +62,6 @@ module.exports = {
       filename: "consultations/index.html"
     }),
     new HtmlWebpackPlugin({
-      template: "./src/guidance/index.hbs",
-      filename: "guidance/index.html"
-    }),
-    new HtmlWebpackPlugin({
-      template: "./src/therapie/index.hbs",
-      filename: "therapie/index.html"
-    }),
-    new HtmlWebpackPlugin({
       template: "./src/contact/index.hbs",
       filename: "contact/index.html"
     })

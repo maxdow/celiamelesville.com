@@ -13,6 +13,12 @@
 
   .container.section {
     display: flex;
+    flex-direction: column;
+    padding: 0
+  }
+
+  .container.section>div {
+    display: flex;
     flex-direction: row;
     padding: 0
   }
@@ -65,15 +71,19 @@
     .bigbutton {
       margin: 0.5em;
     }
+
     .buttoncontain {
       margin: 0
     }
+
     .container.section {
       flex-direction: column;
     }
+
     .img-middle {
       display: none
     }
+
     .img-bottom {
       display: flex
     }
@@ -87,35 +97,43 @@
 
     <div class="main">
       <section class="container section ">
-        <div class="buttoncontain">
+        <div>
+
+          <div class="buttoncontain">
 
 
-          <a href="https://www.formation-tarot.fr" class="bigbutton bigbutton-pad">
-            Formation Tarot
-          </a>
-          <a href="/consultations" class="bigbutton bigbutton-pad">
-            Consultations
-          </a>
+            <a href="https://www.formation-tarot.fr" class="bigbutton bigbutton-pad">
+              Formation Tarot
+            </a>
+            <a href="/consultations" class="bigbutton bigbutton-pad">
+              Consultations
+            </a>
 
 
+          </div>
+          <div class="img-middle" style="flex:0 1 auto">
+            <img class="rounded" src="assets/profil.jpg" width="400" height="319">
+          </div>
+
+          <div class="buttoncontain">
+            <a href="/creations" class="bigbutton">
+              Mes Jeux
+            </a>
+
+            <a href="/boutique" class="bigbutton">
+              Boutique
+            </a>
+          </div>
+          <div class="img-bottom">
+            <img class="rounded" src="assets/profil.jpg" width="400" height="319">
+          </div>
         </div>
-        <div class="img-middle" style="flex:0 1 auto">
-          <img class="rounded" src="assets/profil.jpg" width="400" height="319">
-        </div>
 
-        <div class="buttoncontain">
-          <a href="/creations" class="bigbutton">
-            Mes Jeux
-          </a>
-
-          <a href="/boutique" class="bigbutton">
-            Boutique
-          </a>
-        </div>
-        <div class="img-bottom">
-          <img class="rounded" src="assets/profil.jpg" width="400" height="319">
-        </div>
+        {{!-- <a href="https://www.formation-tarot.fr/planner-gratuit/">
+          <img style="display:block;margin:0 auto;max-width:540px;margin-bottom:2em" src="assets/0.jpg"></a> --}}
     </div>
+
+
     </section>
   </div>
   {{> footer}}

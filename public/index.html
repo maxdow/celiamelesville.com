@@ -7,9 +7,14 @@
   <meta name="description" content="">
   <meta name="keywords" content="art-thérapie, oracles, tarots, guidance, toulouse">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:url" content="https://celiamelesville.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Celia Melesville" />
+  <meta property="og:description" content="art-thérapie, oracles, tarots, guidance" />
+  <meta property="og:image" content="https://celiamelesville.com/assets/profil.jpg" />
   <!-- Favicons -->
     
-  <link rel="stylesheet" href="https://celiamelesville.com/bundle.1.1.0.css">
+  <link rel="stylesheet" href="https://celiamelesville.com/bundle.1.3.0.css">
 
 
 </head>
@@ -20,10 +25,17 @@
 
   img.rounded {
     border-radius: 50%;
-    margin: 1em 0
+    margin: 1em 0;
+    object-fit: cover;
   }
 
   .container.section {
+    display: flex;
+    flex-direction: column;
+    padding: 0
+  }
+
+  .container.section>div {
     display: flex;
     flex-direction: row;
     padding: 0
@@ -54,6 +66,10 @@
     flex-direction: column
   }
 
+  .bigbutton-pad {
+    padding: 1em 0;
+  }
+
   .bigbutton:hover {
     background: #a7a0ba;
     border: 3px solid #706b7c;
@@ -73,15 +89,19 @@
     .bigbutton {
       margin: 0.5em;
     }
+
     .buttoncontain {
       margin: 0
     }
+
     .container.section {
       flex-direction: column;
     }
+
     .img-middle {
       display: none
     }
+
     .img-bottom {
       display: flex
     }
@@ -98,14 +118,7 @@
           <a href="/">Celia Melesville</a>
         </h1>
     
-        <div class="social">
-          <a href="https://www.facebook.com/cartesetconscience/">
-            <img src="https://celiamelesville.com/assets/facebook.png" alt="">
-          </a>
-          <a href="https://www.youtube.com/channel/UCxYXOEYpeeW0ye8OVrXcR0g">
-            <img src="https://celiamelesville.com/assets/youtube.png" alt="">
-          </a>
-        </div>
+         
     
         <h3 class="soustitre">
           Thérapie - Art - Guidance
@@ -117,21 +130,16 @@
       <nav class="menu">
         <ul>
           <li>
-            <a href="/">A Propos</a>
+            <a href="/a-propos">A Propos</a>
           </li>
           <li>
             <a href="/consultations">Consultations</a>
-            <ul class="sous-menu">
-              <li>
-                <a href="/therapie">Thérapie</a>
-              </li>
-              <li>
-                <a href="/guidance">Cartomancie - Guidance</a>
-              </li>
-            </ul>
           </li>
           <li>
             <a href="/creations">Créations</a>
+          </li>
+          <li>
+            <a href="https://www.formation-tarot.fr">Formation</a>
           </li>
           <li>
             <a href="/boutique">Boutique</a>
@@ -144,54 +152,85 @@
       </nav>
     
     </div>
+    
+    <div class="socialbar">
+      <div class="social-wrap">
+    
+        <div class="social-title">
+          Suivez moi sur
+        </div>
+    
+        <div class="socialcontainer">
+    
+          <div class="g-ytsubscribe" data-channelid="UCxYXOEYpeeW0ye8OVrXcR0g" data-layout="full" data-count="default"></div>
+          <a href="https://www.facebook.com/cartesetconscience/">
+            <img src="/assets/facebook.png" alt="">
+          </a>
+          <a href="https://www.instagram.com/celiamelesville/">
+            <img src="/assets/instagram.png" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+    </div>
     <div class="main">
       <section class="container section ">
-        <div class="buttoncontain">
+        <div>
 
-          <a href="/consultations" class="bigbutton">
-            Consultations
-          </a>
+          <div class="buttoncontain">
 
-          <a href="/creations" class="bigbutton">
-            Mes Jeux
-          </a>
 
+            <a href="https://www.formation-tarot.fr" class="bigbutton bigbutton-pad">
+              Formation Tarot
+            </a>
+            <a href="/consultations" class="bigbutton bigbutton-pad">
+              Consultations
+            </a>
+
+
+          </div>
+          <div class="img-middle" style="flex:0 1 auto">
+            <img class="rounded" src="assets/profil.jpg" width="400" height="319">
+          </div>
+
+          <div class="buttoncontain">
+            <a href="/creations" class="bigbutton">
+              Mes Jeux
+            </a>
+
+            <a href="/boutique" class="bigbutton">
+              Boutique
+            </a>
+          </div>
+          <div class="img-bottom">
+            <img class="rounded" src="assets/profil.jpg" width="400" height="319">
+          </div>
         </div>
-        <div class="img-middle" style="flex:0 1 auto">
-          <img class="rounded" src="assets/profil.jpg" width="400" height="319">
-        </div>
 
-        <div class="buttoncontain">
-
-          <a href="/formation-tarot" class="bigbutton">
-            Formation
-          </a>
-
-          <a href="/boutique" class="bigbutton">
-            Boutique
-          </a>
-        </div>
-        <div class="img-bottom">
-          <img class="rounded" src="assets/profil.jpg" width="400" height="319">
-        </div>
     </div>
+
+
     </section>
   </div>
   <div class="footer">
-    Conçu dans le <a href="https://maxlab.fr">Maxlab</a></div>
+    Conçu dans le
+    <a href="https://maxlab.fr">Maxlab</a>
+  </div>
   <script src="https://cdn.ravenjs.com/3.17.0/raven.min.js" crossorigin="anonymous"></script>
   <script>
     (function (i, s, o, g, r, a, m) {
-    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-      (i[r].q = i[r].q || []).push(arguments)  
-  }, i[r].l = 1 * new Date(); a = s.createElement(o),
-      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
     })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
   
     ga('create', 'UA-96234585-1', 'auto');
     ga('send', 'pageview');
   
   </script>
+  
+  <script src="https://apis.google.com/js/platform.js"></script> 
 <script type="text/javascript" src="bundle.js"></script></body>
 
 </html>

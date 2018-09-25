@@ -67,16 +67,7 @@ module.exports = {
       template: "./src/consultations/index.hbs",
       filename: "consultations/index.html"
     }),
-    new HtmlWebpackPlugin({
-      inject: false,
-      template: "./src/guidance/index.hbs",
-      filename: "guidance/index.html"
-    }),
-    new HtmlWebpackPlugin({
-      inject: false,
-      template: "./src/therapie/index.hbs",
-      filename: "therapie/index.html"
-    }),
+
     new HtmlWebpackPlugin({
       inject: false,
       template: "./src/contact/index.hbs",
