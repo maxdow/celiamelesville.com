@@ -92,6 +92,10 @@ class Product extends Component {
   }
   render() {
     const produit = getProduit(this.props.params.name)
+    //Cas si lien vers un produit qui n'existe pas
+    if (produit === undefined) {
+      window.location = "/boutique"
+    }
     return (
       <div className="product-detail">
         <div style={{ display: "flex" }}>
