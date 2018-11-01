@@ -111,32 +111,32 @@ const produits = [
       en: `This deck includes 40 cards and a book ( is bilingual so it is also in English) to help you interpret your spreads.`
     }
   },
-  {
-    nom: {
-      fr: "Runes",
-      en: "Runes"
-    },
-    lien: "runes",
-    cat: {
-      fr: "Runes",
-      en: "Runes"
-    },
-    prix: 32,
-    poids: 300,
-    images: [
-      "runes/0.jpg",
-      "runes/1.jpg",
-      "runes/2.jpg",
-      "runes/3.jpg",
-      "runes/4.jpg",
-      "runes/5.jpg",
-      "runes/6.jpg"
-    ],
-    description: {
-      fr: `...`,
-      en: `...`
-    }
-  },
+  // {
+  //   nom: {
+  //     fr: "Runes",
+  //     en: "Runes"
+  //   },
+  //   lien: "runes",
+  //   cat: {
+  //     fr: "Runes",
+  //     en: "Runes"
+  //   },
+  //   prix: 32,
+  //   poids: 300,
+  //   images: [
+  //     "runes/0.jpg",
+  //     "runes/1.jpg",
+  //     "runes/2.jpg",
+  //     "runes/3.jpg",
+  //     "runes/4.jpg",
+  //     "runes/5.jpg",
+  //     "runes/6.jpg"
+  //   ],
+  //   description: {
+  //     fr: `...`,
+  //     en: `...`
+  //   }
+  // },
   {
     nom: {
       fr: "Marque Page",

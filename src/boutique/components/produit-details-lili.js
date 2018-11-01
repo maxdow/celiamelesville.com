@@ -155,9 +155,9 @@ export class DetailsProduitLili extends Component {
         <h3>
           {lang === "fr" ? "Choisissez votre produit" : "Choose your product"}
         </h3>
-        <div className="product-detail--disclaimer">
+        {/* <div className="product-detail--disclaimer">
           {lang === "fr" ? "Ceci est une pré-commande" : "This is a preorder"}
-        </div>
+        </div> */}
 
         {produits.map((produit, i) => (
           <Item key={i} produit={produit} lang={lang} onClick={onAdd} />

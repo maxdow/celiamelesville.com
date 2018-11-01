@@ -65,7 +65,8 @@ const FraisPort = function({ onChoixPort, portType, port, locales }) {
             checked={portType == "fr"}
             value="fr"
             name="destination"
-          />France
+          />
+          France (Métropolitaine)
         </label>
         <label>
           <input
@@ -74,7 +75,8 @@ const FraisPort = function({ onChoixPort, portType, port, locales }) {
             checked={portType == "eu"}
             value="eu"
             name="destination"
-          />Europe
+          />
+          Europe
         </label>
         <label>
           <input
