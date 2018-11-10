@@ -10,13 +10,10 @@ const descriptionFr = `
             <p>Cartes 350g</p>
             <p>Vernis mat</p>
             <p>Boitier rigide avec dorure</p>
-            <p>
-              <strong>Livraison estimée : septembre 2018</strong>
-            </p>
+
 
             <h3>Un Livre (vendu séparément)</h3>
 
-            <p>⚠️Actuellement en cours d'écriture.</p>
             <p>Livre couleur de 92 pages (minimum) . Format 13.7cm x 17cm</p>
             <p>Exclusivement en Français. Quantité limité à 1000 exemplaires</p>
 `
@@ -25,13 +22,11 @@ const descriptionEn = `
             <p>Cards 350g</p>
             <p>Mat Varnish</p>
             <p>Hard case with gilding</p>
-            <p>
-              <strong>Estimated delivery: September 2018</strong>
-            </p>
+
 
             <h3>A Book (sold separately)</h3>
 
-            <p>⚠️Currently being written.</p>
+
             <p>Color book of 92 pages (minimum). Size 13.7cm x 17cm</p>
             <p>Exclusively in French. Quantity limited to 1000 copies</p>`
 

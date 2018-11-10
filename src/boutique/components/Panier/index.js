@@ -132,6 +132,7 @@ class TotalAchat extends Component {
 
 const Tableau = function({ panier, action, total, lang, locales }) {
   const onChangeQty = function(item, event) {
+    console.log(item, event, event.target.value)
     if (item.quantite > parseInt(event.target.value, 10)) {
       action.onRemove(item)
     } else {
@@ -165,12 +166,25 @@ const Tableau = function({ panier, action, total, lang, locales }) {
 
             <td className="bigcart--prix">{item.prix.toFixed(2)}€</td>
             <td className="bigcart--q">
+              <button
+                className="bigcart--button"
+                onClick={action.onRemove.bind(this, item)}
+              >
+                -
+              </button>
+
               <input
                 type="number"
                 value={item.quantite}
                 min="0"
                 onChange={onChangeQty.bind(this, item)}
               />
+              <button
+                className="bigcart--button"
+                onClick={action.onAdd.bind(this, item)}
+              >
+                +
+              </button>
             </td>
             <td className="bigcart--total">
               {(item.quantite * item.prix).toFixed(2)}€

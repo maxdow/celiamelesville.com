@@ -71,7 +71,16 @@
   width: 50px;
   text-align: center;
 }
-
+.bigcart--button {
+  padding: 0.5em;
+  margin: 0.2em;
+  border: none;
+  background: transparent;
+  font-size: 1.5em;
+  text-align: center;
+  width: 2em;
+  display: inline-block;
+}
 .bigcart--total {
   text-align: right;
 }
