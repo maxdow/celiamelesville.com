@@ -1,6 +1,14 @@
+const checkLang = () => {
+  if (navigator.languages) {
+    return navigator.languages.includes("fr") ? "fr" : "en"
+  } else {
+    return navigator.language.indexOf("fr") !== -1 ? "fr" : "en"
+  }
+}
+
 const defaultState = {
   panier: [],
-  lang: navigator.languages.includes("fr") ? "fr" : "en"
+  lang: checkLang()
 }
 
 // https://tc39.github.io/ecma262/#sec-array.prototype.findIndex
