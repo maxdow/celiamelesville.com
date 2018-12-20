@@ -244,7 +244,7 @@ const produits = [
   },
   {
     nom: {
-      fr: "Carte Postale - Renard",
+      fr: "Carte Postale - Renard Tanis",
       en: "Post card - Tanis Fox "
     },
     lien: "carte-tanis-renard",
@@ -342,8 +342,8 @@ const produits = [
   },
   {
     nom: {
-      fr: "Carte Postale - Renard",
-      en: "Post card - Fox"
+      fr: "Carte Postale - Renard Oracle",
+      en: "Post card - Fox Oracle"
     },
     lien: "carte-renard",
     cat: {
