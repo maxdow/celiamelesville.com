@@ -91,7 +91,15 @@ const produits = [
     },
     prix: 56,
 
-    images: ["lili/4.jpg"]
+    images: [
+      "lili/boites.jpg",
+      "lili/0.jpg",
+      "lili/1.jpg",
+      "lili/2.jpg",
+      "lili/3.jpg",
+      "lili/5.jpg",
+      "lili/6.jpg"
+    ]
   },
   {
     nom: {
@@ -105,7 +113,14 @@ const produits = [
     },
     prix: 32,
     poids: 120,
-    images: ["tanis/tanis.png", "tanis/0.jpg", "tanis/1.jpg", "tanis/2.jpg"],
+    images: [
+      "tanis/tanis.jpg",
+      "tanis/0.jpg",
+      "tanis/1.jpg",
+      "tanis/2.jpg",
+      "tanis/3.jpg",
+      "tanis/4.jpg"
+    ],
     description: {
       fr: `Ce jeu est constitué de 40 cartes et d'un petit livre pour vous aider dans l'interprétation de vos tirages`,
       en: `This deck includes 40 cards and a book ( is bilingual so it is also in English) to help you interpret your spreads.`

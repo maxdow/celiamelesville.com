@@ -26,6 +26,7 @@ class ListImages extends Component {
       <div style={{ display: "flex" }}>
         {images.length > 1 ? (
           <div className="product-detail--images slightbox-container">
+            <h4>Galerie ( cliquer pour zoomer )</h4>
             {images.map((image, i) => (
               <a href={"/images/boutique/" + image} key={i}>
                 <img

@@ -2,6 +2,24 @@
 
 <body>
   <div class="wrapper">
+    <style>
+      .carte-container {
+        display: flex;
+        max-width: 100%;
+      }
+
+      .titre-creation {
+        font-size: 1.5em;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      .carte-container img {}
+
+      .carte-container>div:hover {
+        color: #a7a0ba;
+      }
+    </style>
 
     {{> menuheader}}
 
@@ -22,14 +40,14 @@
           <div>
             <div class="titre-creation">Tanis Lenormand</div>
             <a href="/tanis-lenormand">
-              <img src="/assets/tanis.png" />
+              <img src="/assets/tanis.jpg" width="250" />
             </a>
           </div>
 
           <div>
             <div class="titre-creation">Lili White & Lili Black</div>
             <a href="/liliwhite-liliblack">
-              <img src="/assets/lili/couv.jpg" width="250" />
+              <img src="/assets/lili/boites.jpg" />
             </a>
           </div>
         </div>

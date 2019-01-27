@@ -14,8 +14,8 @@ const descriptionFr = `
 
             <h3>Un Livre (vendu séparément)</h3>
 
-            <p>Livre couleur de 92 pages (minimum) . Format 13.7cm x 17cm</p>
-            <p>Exclusivement en Français. Quantité limité à 1000 exemplaires</p>
+            <p>Livre couleur de 98 pages  . Format 13.7cm x 17cm</p>
+            <p><strong>Exclusivement en Français.</strong> Quantité limité à 1000 exemplaires</p>
 `
 const descriptionEn = `
             <h3>Two decks of 78 cards</h3>
@@ -27,8 +27,8 @@ const descriptionEn = `
             <h3>A Book (sold separately)</h3>
 
 
-            <p>Color book of 92 pages (minimum). Size 13.7cm x 17cm</p>
-            <p>Exclusively in French. Quantity limited to 1000 copies</p>`
+            <p>Color book of 98 pages. Size 13.7cm x 17cm</p>
+            <p><strong>Exclusively in French.</strong> Quantity limited to 1000 copies</p>`
 
 const produits = [
   {
