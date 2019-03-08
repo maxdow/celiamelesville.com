@@ -73,6 +73,16 @@ module.exports = {
       template: "./src/contact/index.hbs",
       filename: "contact/index.html"
     }),
+    new HtmlWebpackPlugin({
+      inject: false,
+
+      template: "./src/thanks/index.hbs",
+      filename: "thanks/index.html"
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/cgv/index.hbs",
+      filename: "cgv/index.html"
+    }),
     new webpack.LoaderOptionsPlugin({
       minimize: true,
       debug: false

@@ -10,8 +10,9 @@ const locales = {
     continuer: "Continuer mes achats",
     autre: "Autre",
     vider: "Vider le panier",
-    accept: "Accepter",
-    CGVtitle: "C G V",
+    accept:
+      "Accepter les <a href='/cgv' target='_blank'>conditions générales de vente</a>",
+    CGVtitle: "Conditions Générales de Vente",
     CGV: `
     <p>Les jeux sont envoyés en lettre suivi.</p>
     <p>Si votre suivi est indiqué comme livré par la poste, vous ne pouvez pas demander un remboursement ou un renvoie du jeu.</p>
@@ -29,7 +30,8 @@ const locales = {
     destination: "to",
     continuer: "Continue shopping",
     autre: "Other",
-    accept: "Accept",
+    accept:
+      "Accept the <a href='/cgv' target='_blank'>terms and conditions</a>",
     CGVtitle: "Terms",
 
     CGV: `

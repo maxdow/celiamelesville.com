@@ -115,13 +115,9 @@ class TotalAchat extends Component {
           {(prixProduits + port).toFixed(2)}€
         </div>
         <h2>{locales.CGVtitle}</h2>
-        <div
-          className="cgv"
-          dangerouslySetInnerHTML={createMarkup(locales.CGV)}
-        />
 
         <label style={{ fontSize: "2em" }}>
-          {locales.accept}
+          <span dangerouslySetInnerHTML={createMarkup(locales.accept)} />
           <input type="checkbox" onChange={this.handleValidState.bind(this)} />
         </label>
         {this.state.CGVValid ? <BoutonPaypal {...this.props} /> : ""}
