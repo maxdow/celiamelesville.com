@@ -56,7 +56,10 @@ const Produit = ({ nom, images, prix, lien, lang, soldout }) => {
 const styleCart = {}
 const ProductListComponent = ({ categories, lang }) => (
   <div style={{ position: "relative" }}>
-    <Link style={{ right: 0, position: "absolute" }} to="/cart">
+    <Link
+      style={{ right: 0, position: "absolute", fontSize: "1.2em" }}
+      to="/cart"
+    >
       🛒
       {lang === "fr" ? "Mon panier" : "My Cart"}
     </Link>

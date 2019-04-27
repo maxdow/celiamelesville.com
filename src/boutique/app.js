@@ -16,9 +16,8 @@ const Boutique = () => (
 )
 
 const App = ({ lang }) => (
-  <div>
+  <div style={{ position: "relative" }}>
     <I18n />
-
     <Boutique />
   </div>
 )

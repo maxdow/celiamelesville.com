@@ -72,6 +72,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/cgv/index.hbs",
       filename: "cgv/index.html"
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/mentions-legales/index.hbs",
+      filename: "mentions-legales/index.html"
     })
   ],
   devServer: {

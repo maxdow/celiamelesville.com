@@ -1,90 +1,44 @@
 const produits = [
   {
     nom: {
-      fr: "L'oracle des reflets [ SOLD OUT ]",
-      en: "L'oracle des reflets [ SOLD OUT ]"
+      fr: "L'oracle des reflets 2eme édition [Pre commande]",
+      en: "L'oracle des reflets 2nd edition [Pre order]"
     },
-    lien: "deck",
-    soldout: true,
+    lien: "oracle-des-reflets",
     cat: {
       fr: "Les Jeux",
       en: "The Decks"
     },
-    prix: 37,
-    poids: 300,
+    prix: 40,
+    poids: 350,
     images: [
-      "jeu/boite2.jpg",
+      "jeu/boite.jpg",
       "jeu/1.jpg",
       "jeu/2.jpg",
       "jeu/3.jpg",
-      "jeu/4.jpg",
-      "jeu/5.jpg",
       "jeu/6.jpg",
       "jeu/7.jpg",
       "jeu/8.jpg"
     ],
     description: {
-      fr: `Un jeu de 57 cartes créé et illustré par Célia Melesville, accompagné d'un livret qui vous aidera dans vos débuts avec l'oracle.</br>
-    <p>Finitions : vernis mat , les cartes sont dorées sur la tranche. Boitier rigide.</p>
+      fr: `<p style="font-size:1.2em">Le jeu est <strong>bilingue</strong> ( Français / Anglais )</p>
+      <p style="font-size:1.2em;color:red">Livraison prévue pour juillet 2019</p>
+      <p style="font-size:1.2em">Ceci est une <strong>pré commande</strong> pour la 2eme édition de l'oracle des reflets</p>
+      <p>Un jeu de 57 cartes créé et illustré par Célia Melesville, accompagné d'un livret qui vous aidera dans vos débuts avec l'oracle.</p>
     `,
-      en: `A set of 57 cards created and illustrated by Celia Melesville, accompanied by a booklet that will help you get started with Oracle. </ Br>
-    <P> Finishes: matt varnish, the cards are golden on the edge. rigid case.`
+      en: `<p style="font-size:1.2em">This deck is <strong>bilingual</strong> ( French / English )</p>
+      <p style="font-size:1.2em">This is a <strong>pre order</strong> for the 2nd edition of "l'oracle des reflets"</p>
+      <p style="font-size:1.2em;color:red">Shipping estimated for july 2019</p>
+      <p>A set of 57 cards created and illustrated by Celia Melesville, accompanied by a booklet that will help you get started with Oracle. </p>
+    `
     }
   },
-  //   {
-  //     nom: {
-  //       fr: "L'oracle des reflets <strong>REBELLE</strong>",
-  //       en: "L'oracle des reflets <strong>REBEL</strong>"
-  //     },
-  //     lien: "jeu-limite",
-  //     cat: {
-  //       fr: "Les Jeux",
-  //       en: "The Decks"
-  //     },
-  //     prix: 22,
-  //     poids: 300,
-  //     images: [
-  //       "jeu/boite.jpg",
-  //       "jeu/1.jpg",
-  //       "jeu/2.jpg",
-  //       "jeu/3.jpg",
-  //       "jeu/4.jpg",
-  //       "jeu/5.jpg",
-  //       "jeu/6.jpg",
-  //       "jeu/7.jpg",
-  //       "jeu/8.jpg"
-  //     ],
-  //     description: {
-  //       fr: `Un jeu de 57 cartes créé et illustré par Célia Melesville, accompagné d'un livret qui vous aidera dans vos débuts avec l'oracle.
-  //     <p>Finitions : vernis mat , les cartes sont dorées sur la tranche. Boitier rigide.</p>
-
-  //     <div class="product-detail--disclaimer">
-  //     <p>La version rebelle est une version de l'oracle des reflets <strong>AVEC DES DEFAUTS</strong></p>
-
-  //     <p>Des défauts d'imprimerie se sont glissés dans ces jeux tel que des problèmes de marge, de dorure, de découpe...
-  //     Il peut être un jeu idéal pour les personnes qui n'ont pas peur de découper les bordures ou qui souhaites tout de même travailler avec le jeu à moindre coûts.</p>
-
-  //     <p><strong>ATTENTION si vous achetez ce jeu, vous acceptez ces défauts et vous ne pourrez pas le retourner ou demander un remboursement!</strong></p>
-  //     </div>
-  //     `,
-  //       en: `A set of 57 cards created and illustrated by Celia Melesville, accompanied by a booklet that will help you get started with Oracle. </ Br>
-  //     <p> Finishes: matt varnish, the cards are golden on the edge. rigid case.
-
-  // <div class="product-detail--disclaimer">
-  //     <p>The rebel version is a version <strong> WITH DEFECTS </strong></p>
-  //  <p>Printing defects have crept into these decks such as problems of margin, gilding, cutting ...
-  //  It can be an ideal deck for people who are not afraid to cut edges or who still want to work with the deck at a lower cost.</p>
-  //  <p><strong> WARNING: If you buy this game, you accept these defects and you will not be able to return it or request a refund! </strong></p>
-  // </div>
-  //     `
-  //     }
-  //   },
   {
     nom: {
       fr: "Lili Black & Lili White Tarots",
       en: "Lili Black & Lili White Tarots"
     },
-    lien: "jeu-lili",
+    lien: "lili-black_lili-white_tarots",
     cat: {
       fr: "Les Jeux",
       en: "The Decks"
@@ -122,36 +76,13 @@ const produits = [
       "tanis/4.jpg"
     ],
     description: {
-      fr: `Ce jeu est constitué de 40 cartes et d'un petit livre pour vous aider dans l'interprétation de vos tirages`,
-      en: `This deck includes 40 cards and a book ( is bilingual so it is also in English) to help you interpret your spreads.`
+      fr: `<p style="font-size:1.2em">Le jeu est <strong>bilingue</strong> ( Français / Anglais )</p>
+      Ce jeu est constitué de 40 cartes et d'un petit livre pour vous aider dans l'interprétation de vos tirages`,
+      en: `<p style="font-size:1.2em">This deck is <strong>bilingual</strong> ( French / English )</p>
+      This deck includes 40 cards and a book to help you interpret your spreads.`
     }
   },
-  // {
-  //   nom: {
-  //     fr: "Runes",
-  //     en: "Runes"
-  //   },
-  //   lien: "runes",
-  //   cat: {
-  //     fr: "Runes",
-  //     en: "Runes"
-  //   },
-  //   prix: 32,
-  //   poids: 300,
-  //   images: [
-  //     "runes/0.jpg",
-  //     "runes/1.jpg",
-  //     "runes/2.jpg",
-  //     "runes/3.jpg",
-  //     "runes/4.jpg",
-  //     "runes/5.jpg",
-  //     "runes/6.jpg"
-  //   ],
-  //   description: {
-  //     fr: `...`,
-  //     en: `...`
-  //   }
-  // },
+
   {
     nom: {
       fr: "Marque Page",

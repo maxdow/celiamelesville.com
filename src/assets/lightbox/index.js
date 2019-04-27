@@ -199,9 +199,12 @@ var slightBox = {
         )
     }
     this.b.addEventListener("click", function(e) {
+      console.log("eeee")
       var t = e.target
       if (!t) return !1
-      if (t.className === pThis.closeClass) pThis.closeIt()
+      if (t.className === pThis.closeClass) {
+        pThis.closeIt()
+      }
       if (t.className.split(" ")[0] == pThis.captionToggleClass) {
         var tp = t.parentElement
         pThis.toggleCaption(tp)

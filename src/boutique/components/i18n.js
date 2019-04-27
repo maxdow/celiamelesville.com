@@ -21,12 +21,13 @@ const styleI18 = {
 
 const I18nComponent = ({ lang, dispatch }) => (
   <div style={styleI18}>
+    {lang === "fr" ? "Select your language" : "Choisissez votre langue "}:
     <a
       onClick={() => dispatch(changeLang("fr"))}
       style={lang === "fr" ? styleSelect : styleA}
     >
       {" "}
-      Fr{" "}
+      Français{" "}
     </a>{" "}
     /
     <a
@@ -34,7 +35,7 @@ const I18nComponent = ({ lang, dispatch }) => (
       style={lang === "en" ? styleSelect : styleA}
     >
       {" "}
-      En
+      English
     </a>
   </div>
 )

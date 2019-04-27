@@ -1,10 +1,10 @@
 .header {
   position: relative;
-  background: url("/assets/1.jpg") no-repeat;
-  background-size: cover;
+  background: url(/assets/banniere.jpg) no-repeat #fff;
+  background-position: 37px -21px;
 }
 .top-header {
-  min-height: 170px;
+  min-height: 200px;
   position: relative;
   padding-bottom: 1em;
 }
@@ -39,14 +39,16 @@
 
 h1.site-title {
   margin: 0;
-  padding-top: 20px;
-  font-weight: 200;
+  padding-top: 0;
+  font-size: 5em;
+  text-shadow: 2px 2px 2px #222;
 }
 
 .site-title {
   font-size: 5em;
   text-align: center;
-  color: #222;
+  color: #fff;
+  font-weight: 500;
   font-family: "Ruthie", "Helvetica";
 }
 

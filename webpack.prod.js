@@ -83,6 +83,10 @@ module.exports = {
       template: "./src/cgv/index.hbs",
       filename: "cgv/index.html"
     }),
+    new HtmlWebpackPlugin({
+      template: "./src/mentions-legales/index.hbs",
+      filename: "mentions-legales/index.html"
+    }),
     new webpack.LoaderOptionsPlugin({
       minimize: true,
       debug: false

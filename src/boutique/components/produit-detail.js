@@ -101,7 +101,7 @@ class Product extends Component {
       <div className="product-detail">
         <div style={{ display: "flex" }}>
           <ImagesProduit imageIndex={this.state.imageIndex} {...produit} />
-          {produit.lien === "jeu-lili" ? (
+          {produit.lien === "lili-black_lili-white_tarots" ? (
             <DetailsProduitLili
               onAdd={this.props.onAdd}
               lang={this.props.lang}
