@@ -14,6 +14,7 @@ import { AppContainer } from "react-hot-loader"
 import rootReducer from "./reducer"
 import "./polyfills"
 import Boutique from "./app"
+import "react-image-lightbox/style.css"
 
 const reducer = compose(mergePersistedState())(rootReducer)
 const storage = compose()(adapter(window.sessionStorage))

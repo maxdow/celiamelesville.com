@@ -8,6 +8,11 @@
   position: relative;
   padding-bottom: 1em;
 }
+a.top-header {
+  text-decoration: none;
+  display: block;
+}
+
 @media all and (max-width: 910px) {
   .top-header {
     background: linear-gradient(

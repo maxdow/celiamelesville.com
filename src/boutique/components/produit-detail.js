@@ -4,33 +4,54 @@ import { connect } from "react-redux"
 import produits from "../produits"
 import { Link } from "react-router"
 import { DetailsProduitLili } from "./produit-details-lili"
+import Lightbox from "react-image-lightbox"
 
 function createMarkup(markup) {
   return { __html: markup }
 }
-
+const IMG_ROOT_URL = "/images/boutique/"
 /**
  * Retoure le produit associé au lien
  */
 const getProduit = lien => produits.find(produit => produit.lien === lien)
 
 class ListImages extends Component {
-  componentDidMount() {
-    if (window.slightBox) {
-      window.slightBox.make()
+  // componentDidMount() {
+  //   if (window.slightBox) {
+  //     window.slightBox.make()
+  //   }
+  // }
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      photoIndex: 0,
+      isOpen: false
     }
+  }
+  handleClick(imageIndex, e) {
+    e.preventDefault()
+    this.setState({
+      isOpen: true,
+      photoIndex: imageIndex
+    })
   }
   render() {
     const { images, nom, onImageSelect, lang } = this.props
+    const { photoIndex, isOpen } = this.state
     return (
       <div style={{ display: "flex" }}>
         {images.length > 1 ? (
           <div className="product-detail--images slightbox-container">
             <h4>Galerie ( cliquer pour zoomer )</h4>
             {images.map((image, i) => (
-              <a href={"/images/boutique/" + image} key={i}>
+              <a
+                href={IMG_ROOT_URL + image}
+                key={i}
+                onClick={this.handleClick.bind(this, i)}
+              >
                 <img
-                  src={"/images/boutique/" + image}
+                  src={IMG_ROOT_URL + image}
                   alt={nom[lang]}
                   onTouchStart={onImageSelect.bind(this, i)}
                   onMouseOver={onImageSelect.bind(this, i)}
@@ -40,6 +61,27 @@ class ListImages extends Component {
             ))}
           </div>
         ) : null}
+        {isOpen && (
+          <Lightbox
+            mainSrc={IMG_ROOT_URL + images[photoIndex]}
+            nextSrc={IMG_ROOT_URL + images[(photoIndex + 1) % images.length]}
+            prevSrc={
+              IMG_ROOT_URL +
+              images[(photoIndex + images.length - 1) % images.length]
+            }
+            onCloseRequest={() => this.setState({ isOpen: false })}
+            onMovePrevRequest={() =>
+              this.setState({
+                photoIndex: (photoIndex + images.length - 1) % images.length
+              })
+            }
+            onMoveNextRequest={() =>
+              this.setState({
+                photoIndex: (photoIndex + 1) % images.length
+              })
+            }
+          />
+        )}
       </div>
     )
   }
@@ -48,9 +90,9 @@ class ListImages extends Component {
 const ImagesProduit = ({ imageIndex, images, nom, lang }) => (
   <div className="product-detail--image">
     <div className="product-img-container">
-      <a href={"/images/boutique/" + images[imageIndex]}>
+      <a href={IMG_ROOT_URL + images[imageIndex]}>
         <img
-          src={"/images/boutique/" + images[imageIndex]}
+          src={IMG_ROOT_URL + images[imageIndex]}
           alt={nom[lang]}
           draggable="false"
         />
