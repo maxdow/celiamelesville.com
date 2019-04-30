@@ -118,7 +118,11 @@ class TotalAchat extends Component {
 
         <label style={{ fontSize: "2em" }}>
           <span dangerouslySetInnerHTML={createMarkup(locales.accept)} />
-          <input type="checkbox" onChange={this.handleValidState.bind(this)} />
+          <input
+            type="checkbox"
+            style={{ transform: "scale(2.5)", marginLeft: "1em" }}
+            onChange={this.handleValidState.bind(this)}
+          />
         </label>
         {this.state.CGVValid ? <BoutonPaypal {...this.props} /> : ""}
       </div>

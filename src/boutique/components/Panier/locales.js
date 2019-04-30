@@ -11,7 +11,7 @@ const locales = {
     autre: "Autre",
     vider: "Vider le panier",
     accept:
-      "Accepter les <a href='/cgv' target='_blank'>conditions générales de vente</a>",
+      "Cocher la case pour accepter les <a href='/cgv' target='_blank'>conditions générales de vente</a> et passer au paiement",
     CGVtitle: "Conditions Générales de Vente",
     CGV: `
     <p>Les jeux sont envoyés en lettre suivi.</p>
@@ -31,7 +31,7 @@ const locales = {
     continuer: "Continue shopping",
     autre: "Other",
     accept:
-      "Accept the <a href='/cgv' target='_blank'>terms and conditions</a>",
+      "Check the box to accept the <a href='/cgv' target='_blank'>terms and conditions</a> and proceed to payment",
     CGVtitle: "Terms",
 
     CGV: `
