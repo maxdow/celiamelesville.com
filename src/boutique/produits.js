@@ -13,12 +13,9 @@ const produits = [
     poids: 350,
     images: [
       "jeu/boite.jpg",
-      "jeu/1.jpg",
-      "jeu/2.jpg",
-      "jeu/3.jpg",
-      "jeu/6.jpg",
-      "jeu/7.jpg",
-      "jeu/8.jpg"
+      "oraclereflets/0.jpg",
+      "oraclereflets/1.jpg",
+      "oraclereflets/2.jpg"
     ],
     description: {
       fr: `<p style="font-size:1.2em">Le jeu est <strong>bilingue</strong> ( Français / Anglais )</p>
@@ -47,12 +44,25 @@ const produits = [
 
     images: [
       "lili/boites.jpg",
-      "lili/0.jpg",
-      "lili/1.jpg",
-      "lili/2.jpg",
-      "lili/3.jpg",
-      "lili/5.jpg",
-      "lili/6.jpg"
+      "lili/gallery/0.jpg",
+      "lili/gallery/1.jpg",
+      "lili/gallery/2.jpg",
+      "lili/gallery/3.jpg",
+      "lili/gallery/4.jpg",
+      "lili/gallery/5.jpg",
+      "lili/gallery/6.jpg",
+      "lili/gallery/7.jpg",
+      "lili/gallery/8.jpg",
+      "lili/gallery/9.jpg",
+      "lili/gallery/10.jpg",
+      "lili/gallery/11.jpg",
+      "lili/gallery/12.jpg",
+      "lili/gallery/13.jpg",
+      "lili/gallery/14.jpg",
+      "lili/gallery/15.jpg",
+      "lili/gallery/16.jpg",
+      "lili/gallery/17.jpg",
+      "lili/gallery/18.jpg"
     ]
   },
   {
@@ -92,16 +102,7 @@ const produits = [
     },
     images: ["collaborations/couleurs.jpg"]
   },
-  {
-    nom: "L'Oracle des haïkus",
 
-    lien: "https://amzn.to/2VQc5ZI",
-    cat: {
-      fr: "Jeux en collaboration",
-      en: "Collaborative Tarot Decks"
-    },
-    images: ["collaborations/oracle des haikus.jpg"]
-  },
   {
     nom: "Le Petit Oracle des Fées",
 
@@ -131,6 +132,16 @@ const produits = [
       en: "Collaborative Tarot Decks"
     },
     images: ["collaborations/oracle_de_gaia.jpg"]
+  },
+  {
+    nom: "L'Oracle des haïkus",
+
+    lien: "https://amzn.to/2VQc5ZI",
+    cat: {
+      fr: "Jeux en collaboration",
+      en: "Collaborative Tarot Decks"
+    },
+    images: ["collaborations/oracle des haikus.jpg"]
   },
   {
     nom: {
