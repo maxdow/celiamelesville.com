@@ -82,7 +82,18 @@ const produits = [
       This deck includes 40 cards and a book to help you interpret your spreads.`
     }
   },
-
+  {
+    nom: {
+      fr: "Le Petit Oracle des Couleurs",
+      en: "Le Petit Oracle des Couleurs"
+    },
+    lien: "https://amzn.to/2JBhNwE",
+    cat: {
+      fr: "Jeux en collaboration",
+      en: "Collaborative Tarot Decks"
+    },
+    images: ["collaborations/couleurs.jpg"]
+  },
   {
     nom: {
       fr: "Marque Page",

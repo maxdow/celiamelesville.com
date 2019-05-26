@@ -37,19 +37,29 @@ const getCategories = (produits, langue) => {
 
 const Produit = ({ nom, images, prix, lien, lang, soldout }) => {
   nom = nom[lang]
+
+  const content = (
+    <React.Fragment>
+      <img src={"/images/boutique/" + images[0]} alt={nom} />
+
+      <figcaption className="boutique-item-description">
+        <p
+          className="boutique-item-titre"
+          dangerouslySetInnerHTML={createMarkup(nom)}
+        />
+        {prix ? (
+          <p className="boutique-item-prix">{prix.toFixed(2) + "€"}</p>
+        ) : null}
+      </figcaption>
+    </React.Fragment>
+  )
   return (
     <figure className={"boutique-item " + (soldout ? "soldout-grey" : "")}>
-      <Link to={"/produit/" + lien}>
-        <img src={"/images/boutique/" + images[0]} alt={nom} />
-
-        <figcaption className="boutique-item-description">
-          <p
-            className="boutique-item-titre"
-            dangerouslySetInnerHTML={createMarkup(nom)}
-          />
-          <p className="boutique-item-prix">{prix.toFixed(2) + "€"}</p>
-        </figcaption>
-      </Link>
+      {lien.indexOf("http") === -1 ? (
+        <Link to={lien}>{content}</Link>
+      ) : (
+        <a href={lien}>{content}</a>
+      )}
     </figure>
   )
 }
