@@ -36,7 +36,7 @@ const getCategories = (produits, langue) => {
 }
 
 const Produit = ({ nom, images, prix, lien, lang, soldout }) => {
-  nom = nom[lang]
+  nom = typeof nom === "object" ? nom[lang] : nom
 
   const content = (
     <React.Fragment>

@@ -83,16 +83,54 @@ const produits = [
     }
   },
   {
-    nom: {
-      fr: "Le Petit Oracle des Couleurs",
-      en: "Le Petit Oracle des Couleurs"
-    },
+    nom: "Le Petit Oracle des Couleurs",
+
     lien: "https://amzn.to/2JBhNwE",
     cat: {
       fr: "Jeux en collaboration",
       en: "Collaborative Tarot Decks"
     },
     images: ["collaborations/couleurs.jpg"]
+  },
+  {
+    nom: "L'Oracle des haïkus",
+
+    lien: "https://amzn.to/2VQc5ZI",
+    cat: {
+      fr: "Jeux en collaboration",
+      en: "Collaborative Tarot Decks"
+    },
+    images: ["collaborations/oracle des haikus.jpg"]
+  },
+  {
+    nom: "Le Petit Oracle des Fées",
+
+    lien: "https://amzn.to/2YNnOKb",
+    cat: {
+      fr: "Jeux en collaboration",
+      en: "Collaborative Tarot Decks"
+    },
+    images: ["collaborations/oracle_des_fees.jpg"]
+  },
+  {
+    nom: "Le Petit Oracle des Animaux de Pouvoir",
+
+    lien: "https://amzn.to/2HWNyNC",
+    cat: {
+      fr: "Jeux en collaboration",
+      en: "Collaborative Tarot Decks"
+    },
+    images: ["collaborations/animaux_de_pouvoir.jpg"]
+  },
+  {
+    nom: "Le Petit Oracle de Gaïa",
+
+    lien: "https://amzn.to/2W7vtWT",
+    cat: {
+      fr: "Jeux en collaboration",
+      en: "Collaborative Tarot Decks"
+    },
+    images: ["collaborations/oracle_de_gaia.jpg"]
   },
   {
     nom: {
