@@ -34,7 +34,11 @@ const getCategories = (produits, langue) => {
     return acc
   }, {})
 }
-
+const styleSoldOut = {
+  color: "red",
+  fontSize: "1.2em",
+  fontWeight: 600
+}
 const Produit = ({ nom, images, prix, lien, lang, soldout }) => {
   nom = typeof nom === "object" ? nom[lang] : nom
 
@@ -47,7 +51,8 @@ const Produit = ({ nom, images, prix, lien, lang, soldout }) => {
           className="boutique-item-titre"
           dangerouslySetInnerHTML={createMarkup(nom)}
         />
-        {prix ? (
+        {soldout ? <div style={styleSoldOut}>SOLD OUT</div> : null}
+        {!soldout && prix ? (
           <p className="boutique-item-prix">{prix.toFixed(2) + "€"}</p>
         ) : null}
       </figcaption>

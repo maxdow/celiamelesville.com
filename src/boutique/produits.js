@@ -75,6 +75,7 @@ const produits = [
       fr: "Les Jeux",
       en: "The Decks"
     },
+    soldout: true,
     prix: 32,
     poids: 120,
     images: [
