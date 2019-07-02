@@ -1,8 +1,8 @@
 const produits = [
   {
     nom: {
-      fr: "L'oracle des reflets 2eme édition [Pre commande]",
-      en: "L'oracle des reflets 2nd edition [Pre order]"
+      fr: "L'oracle des reflets 2eme édition",
+      en: "L'oracle des reflets 2nd edition"
     },
     lien: "oracle-des-reflets",
     cat: {
@@ -19,13 +19,9 @@ const produits = [
     ],
     description: {
       fr: `<p style="font-size:1.2em">Le jeu est <strong>bilingue</strong> ( Français / Anglais )</p>
-      <p style="font-size:1.2em;color:red">Livraison prévue pour juillet 2019</p>
-      <p style="font-size:1.2em">Ceci est une <strong>pré commande</strong> pour la 2eme édition de l'oracle des reflets</p>
       <p>Un jeu de 57 cartes créé et illustré par Célia Melesville, accompagné d'un livret qui vous aidera dans vos débuts avec l'oracle.</p>
     `,
       en: `<p style="font-size:1.2em">This deck is <strong>bilingual</strong> ( French / English )</p>
-      <p style="font-size:1.2em">This is a <strong>pre order</strong> for the 2nd edition of "l'oracle des reflets"</p>
-      <p style="font-size:1.2em;color:red">Shipping estimated for july 2019</p>
       <p>A set of 57 cards created and illustrated by Celia Melesville, accompanied by a booklet that will help you get started with Oracle. </p>
     `
     }
@@ -88,9 +84,11 @@ const produits = [
     ],
     description: {
       fr: `<p style="font-size:1.2em">Le jeu est <strong>bilingue</strong> ( Français / Anglais )</p>
-      Ce jeu est constitué de 40 cartes et d'un petit livre pour vous aider dans l'interprétation de vos tirages`,
+      Ce jeu est constitué de 40 cartes et d'un petit livre pour vous aider dans l'interprétation de vos tirages.
+      <div style="color:red;font-size:1.5em">Réédition prévue fin 2020</div>`,
       en: `<p style="font-size:1.2em">This deck is <strong>bilingual</strong> ( French / English )</p>
-      This deck includes 40 cards and a book to help you interpret your spreads.`
+      This deck includes 40 cards and a book to help you interpret your spreads.
+      <div style="color:red;font-size:1.5em">New Edition scheduled for the end of 2020</div>`
     }
   },
   {
