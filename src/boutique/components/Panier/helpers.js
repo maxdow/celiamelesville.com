@@ -18,7 +18,11 @@ export function totalPanier(panier = [], typePort) {
   )
   return {
     totalPrix: tmp.totalPrix,
-    fraisPort: calculFraisPort(tmp.totalPoids, typePort, liliPresent(panier))
+    fraisPort: calculFraisPort({
+      poids: tmp.totalPoids,
+      typePort: typePort,
+      lilipresent: liliPresent(panier)
+    })
   }
 }
 export function createMarkup(markup) {

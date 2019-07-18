@@ -63,6 +63,51 @@ const produits = [
   },
   {
     nom: {
+      fr: "Sweet Ladies",
+      en: "Sweet Ladies"
+    },
+    lien: "sweet_ladies",
+    cat: {
+      fr: "Les Jeux",
+      en: "The Decks"
+    },
+    prix: 38,
+    poids: 250,
+    description: {
+      fr: `
+      <p><strong>Ceci est une pré-commande. Livraison prévue début novembre 2019</strong></p>
+      <p style="font-size:1.2em">Le jeu est <strong>bilingue</strong> ( Français / Anglais )</p>
+      <p>Un jeu de 50 cartes créé par Célia Melesville, accompagné d'un livret qui vous aidera dans vos débuts avec l'oracle.</p>
+    `,
+      en: `
+      <p><strong>This is a pre-order. Expected Delivery beginning of November 2019</strong></p>
+      <p style="font-size:1.2em">This deck is <strong>bilingual</strong> ( French / English )</p>
+      <p>A set of 50 cards created by Celia Melesville, accompanied by a booklet that will help you get started with Oracle. </p>
+    `
+    },
+    images: [
+      "sweetladies/12 (Grand).jpg",
+      "sweetladies/2 (Grand).jpg",
+      "sweetladies/3 (Grand).jpg",
+      "sweetladies/5 (Grand).jpg",
+      "sweetladies/6 (Grand).jpg",
+      "sweetladies/7 (Grand).jpg",
+      "sweetladies/8 (Grand).jpg",
+      "sweetladies/10 (Grand).jpg",
+      "sweetladies/14 (Grand).jpg",
+      "sweetladies/16 (Grand).jpg",
+      "sweetladies/18 (Grand).jpg",
+      "sweetladies/20 (Grand).jpg",
+      "sweetladies/21 (Grand).jpg",
+      "sweetladies/23 (Grand).jpg",
+      "sweetladies/25 (Grand).jpg",
+      "sweetladies/27 (Grand).jpg",
+      "sweetladies/28 (Grand).jpg",
+      "sweetladies/31 (Grand).jpg"
+    ]
+  },
+  {
+    nom: {
       fr: "Tanis Lenormand",
       en: "Tanis Lenormand"
     },

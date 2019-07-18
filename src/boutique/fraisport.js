@@ -77,7 +77,7 @@ const portLili = [
   }
 ]
 
-export function calculFraisPort(poids, typePort, lilipresent) {
+export function calculFraisPort({ poids, typePort, lilipresent }) {
   const typeLimite = lilipresent ? limitePoidsLili : limitePoids
   const listePrix = lilipresent ? portLili : portStandard
   //on force un poids de 1000 pour calculer les frais de ports Fr car il n'existe pas un seuil à 750
