@@ -39,7 +39,15 @@ const styleSoldOut = {
   fontSize: "1.2em",
   fontWeight: 600
 }
-const Produit = ({ nom, images, prix, lien, lang, soldout }) => {
+
+const SoldOut = ({ msg }) => (
+  <div style={styleSoldOut}>
+    <div>SOLD OUT</div>
+    {msg ? <div>{msg}</div> : null}
+  </div>
+)
+
+const Produit = ({ nom, images, prix, lien, lang, soldout, soldoutmsg }) => {
   nom = typeof nom === "object" ? nom[lang] : nom
 
   const content = (
@@ -51,7 +59,7 @@ const Produit = ({ nom, images, prix, lien, lang, soldout }) => {
           className="boutique-item-titre"
           dangerouslySetInnerHTML={createMarkup(nom)}
         />
-        {soldout ? <div style={styleSoldOut}>SOLD OUT</div> : null}
+        {soldout ? <SoldOut msg={soldoutmsg} /> : null}
         {!soldout && prix ? (
           <p className="boutique-item-prix">{prix.toFixed(2) + "€"}</p>
         ) : null}

@@ -121,6 +121,7 @@ const produits = [
       en: "The Decks"
     },
     soldout: true,
+    soldoutmsg: "REEDITION FIN 2020",
     prix: 32,
     poids: 120,
     images: [
