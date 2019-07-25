@@ -1,7 +1,10 @@
 import { calculFraisPort } from "../../fraisport"
 
-const liliPresent = (panier = []) =>
-  panier.some(produit => produit.nom.fr.includes("Lili"))
+const tarifLili = (panier = []) =>
+  panier.some(
+    produit =>
+      produit.nom.fr.includes("Lili") || produit.nom.fr.includes("Sweet")
+  )
 
 export function totalPanier(panier = [], typePort) {
   const tmp = panier.reduce(
@@ -21,7 +24,7 @@ export function totalPanier(panier = [], typePort) {
     fraisPort: calculFraisPort({
       poids: tmp.totalPoids,
       typePort: typePort,
-      lilipresent: liliPresent(panier)
+      tarifLili: tarifLili(panier)
     })
   }
 }
