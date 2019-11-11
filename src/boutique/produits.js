@@ -75,14 +75,12 @@ const produits = [
     poids: 250,
     description: {
       fr: `
-      <p><strong>Ceci est une pré-commande. Livraison prévue début novembre 2019</strong></p>
       <p style="font-size:1.2em">Le jeu est <strong>bilingue</strong> ( Français / Anglais )</p>
       <p>Le Sweet Ladies est un coffret contenant un livret et 50 cartes. Les cartes sont des reproductions de vielles peintures.</p>
       <p>Le livret (bilingue) comprend 80 pages qui expliquent comment utiliser les cartes et travailler avec aussi bien en développement personnel, tirage psychologique et relationnel ou divination.</p>
       <p style="margin-top:1em;font-size:1.2em;color:#d27acb;">Une partie des bénéfices de ce jeu sera reversée à une oeuvre caritative pour le droit des femmes.</p>
     `,
       en: `
-      <p><strong>This is a pre order. Delivery estimated for november 2019</strong></p>
       <p style="font-size:1.2em">This deck is <strong>bilingual</strong> ( French / English )</p>
       <p>The Sweet Ladies is a box containing a booklet and 50 cards. Cards are reproductions of old paintings</p>
       <p>The booklet (bilingual) includes 80 pages that explain how to use the cards and how to work with them. The readings you can do with includes personal development, psychological reading, relational reading or divination.</p>

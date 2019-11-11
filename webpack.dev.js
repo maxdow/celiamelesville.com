@@ -33,13 +33,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/index.hbs"
     }),
+
     new HtmlWebpackPlugin({
-      template: "./src/creations/index.hbs",
-      filename: "creations/index.html"
-    }),
-    new HtmlWebpackPlugin({
-      template: "./src/formation-tarot/index.hbs",
-      filename: "formation-tarot/index.html"
+      template: "./src/formations/index.hbs",
+      filename: "formations/index.html"
     }),
     new HtmlWebpackPlugin({
       template: "./src/a-propos/index.hbs",
