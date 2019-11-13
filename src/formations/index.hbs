@@ -7,15 +7,74 @@
     text-decoration: none;
   }
 
-  section img {
-    display: block;
-    width: 100%;
+
+
+  .list-formations {}
+
+  h1 {
+    font-size: 2.5em !important;
+    font-family: 'Times New Roman', Times, serif !important;
   }
 
-  section a {
+  .section h2 {
+    border-bottom: none !important;
+    text-align: center !important;
+    text-shadow: none !important;
+    width: auto !important;
+    padding: 0 !important;
+  }
+
+  .block-formation {
+    border-bottom: 2px solid rgba(209, 196, 233, 0.3);
+    width: 70%;
+    margin: 5em auto;
+  }
+
+  .block-formation__img {
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+    border: 1px solid #222;
+  }
+
+  .block-formation img {
+    width: 300px;
+    height: 200px;
+    border: 1px solid #222;
+
+    box-shadow: 1px 1px 2px #e6e6e6;
+  }
+
+  .block-formation a:hover img {
+    box-shadow: 1px 1px 5px #a2a2a2;
+
+  }
+
+
+  .block-formation a {
+    font-family: 'Times New Roman', Times, serif;
+
+    text-decoration: none;
     display: block;
-    width: auto;
-    margin: 1em 25%;
+    text-align: center;
+    color: #222;
+  }
+
+  .block-formation h4 {
+    margin: 0;
+    font-size: 1.2em;
+
+  }
+
+  .block-formation p {
+    margin: 0;
+    font-size: 0.8em;
+    color: #333
+  }
+
+  .descrip {
+    margin: 1em;
+
   }
 </style>
 
@@ -27,13 +86,52 @@
 
     <div class="main">
       <section class="container section">
-        <h1>Formations</h1>
-        <a href="https://www.formation-tarot.fr/" title="Formation de Tarot en ligne"><img
-            src="../assets/formations/formation_tarot.jpg" alt="Formation de Tarot en ligne" /></a>
-        <a href="https://formations.celiamelesville.com/accueil-creativite/"
-          title="Développer sa créativité en 10 minutes par jour"><img
-            src="../assets/formations/developper_sa_creativite.jpg"
-            alt="Développer sa créativité en 10 minutes par jour" /></a>
+        <h1>Accédez à l'ensemble de mes formations</h1>
+        <div class="list-formations">
+
+          <div class="block-formation">
+            <h2>
+              <a href="https://www.formation-tarot.fr/" title="Formation de Tarot en ligne">
+                <img src="../assets/formations/tarot.jpg" />
+                <div class="descrip">
+
+                  <h4>Formation Tarot</h4>
+                  <p>Arcanes Majeurs</p>
+                  <p>Arcanes Mineurs</p>
+                </div>
+              </a>
+            </h2>
+          </div>
+          <div class="block-formation">
+            <h2>
+              <a href="https://formations.celiamelesville.com/accueil-creativite/"
+                title="Comment développer sa créativité en 10 minutes par jours">
+                <img src="../assets/formations/creativite.jpg" />
+                <div class="descrip">
+
+                  <h4>Comment développer sa créativité en 10 minutes par jours</h4>
+                  <p>Une méthode simple et ludique!</p>
+                </div>
+              </a>
+            </h2>
+          </div>
+          <div class="block-formation">
+            <h2>
+              <a href="#" title="Le guide complet pour apprendre à tirer les cartes">
+                <img style="filter: grayscale(1);" src="../assets/formations/tirage_cartes.jpg" />
+                <div class="descrip">
+
+                  <h4>Le guide complet pour apprendre à tirer les cartes</h4>
+                  <p>Adapté aux tarots et aux oracles</p>
+                  <p style="color:coral">A paraître en Janvier 2020</p>
+                </div>
+              </a>
+            </h2>
+          </div>
+
+
+        </div>
+
 
 
       </section>
