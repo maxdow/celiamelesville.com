@@ -325,20 +325,6 @@ const produits = [
   },
   {
     nom: {
-      fr: "Carte Postale - La Chouette",
-      en: "Post card - The Owl "
-    },
-    lien: "carte-chouette",
-    cat: {
-      fr: "Cartes Postales",
-      en: "Post cards"
-    },
-    prix: 2.5,
-    poids: 5,
-    images: ["/cartepostale/chouette.jpg"]
-  },
-  {
-    nom: {
       fr: "Carte Postale - La Construction",
       en: "Post card - The Contruction"
     },

@@ -1,12 +1,10 @@
 .menu {
   font-family: "Calligraffitti", "Helvetica";
   font-weight: 400;
-  background: #a7a0ba;
+  background: #a7a0ba !important;
   padding: 5px;
   font-size: 1.8em;
-  /*border-radius: 10px 10px 0 0 ;*/
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-  /*border:1px solid #eee;*/
 }
 
 .menu ul {
