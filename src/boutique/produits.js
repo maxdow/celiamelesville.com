@@ -235,31 +235,7 @@ const produits = [
     `
     }
   },
-  {
-    nom: {
-      fr: "Pack 6 cartes postales + 1 marque page",
-      en: "6 cards + 1 bookmark"
-    },
-    lien: "pack6-marque-page",
-    cat: {
-      fr: "Les Packs",
-      en: "Packs"
-    },
-    prix: 15,
-    poids: 39,
-    images: [
-      "pack6/pack6.jpg",
-      "pack6/construction.jpg",
-      "pack6/ralentissement.jpg",
-      "pack6/renard.jpg",
-      "pack6/dualite.jpg",
-      "pack6/dispersion.jpg"
-    ],
-    description: {
-      fr: "Pack de 6 cartes postales accompagné un marque page",
-      en: "6 postal cards pack with a Bookmark "
-    }
-  },
+
   {
     nom: {
       fr: "Pack Saisons",
