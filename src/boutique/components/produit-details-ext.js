@@ -109,7 +109,7 @@ const produits = [
   }
 ]
 
-const Item = ({ produit, lang, onClick }) => {
+const ItemSubProduct = ({ produit, lang, onClick }) => {
   const nom = produit.nom[lang]
   return (
     <Link to="/cart">
@@ -134,12 +134,13 @@ const Item = ({ produit, lang, onClick }) => {
   )
 }
 
-export class DetailsProduitLili extends Component {
+export class DetailsProduitExt extends Component {
   render() {
     const { onAdd, lang } = this.props
     return (
       <div className="product-detail--container">
-        <h2>Tarots Lili Black & Lili White</h2>
+        <h2></h2>
+        <h2 dangerouslySetInnerHTML={createMarkup(nom[lang])} />
         {/* <div className="product-detail--prix">{prix.toFixed(2)} €</div> */}
         <div
           className="product-detail--description"

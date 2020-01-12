@@ -55,6 +55,12 @@ if (!Array.prototype.findIndex) {
     }
   })
 }
+
+export const addProduct = produit => ({
+  type: "ADD",
+  item: produit
+})
+
 export default function rootReducer(state = defaultState, action) {
   var { panier, lang } = state
 

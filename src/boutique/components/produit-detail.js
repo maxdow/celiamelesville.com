@@ -3,8 +3,9 @@ import { connect } from "react-redux"
 
 import produits from "../produits"
 import { Link } from "react-router"
-import { DetailsProduitLili } from "./produit-details-lili"
+// import { DetailsProduitLili } from "./produit-details-lili"
 import Lightbox from "react-image-lightbox"
+import { addProduct } from "../reducer"
 
 function createMarkup(markup) {
   return { __html: markup }
@@ -101,18 +102,63 @@ const ImagesProduit = ({ imageIndex, images, nom, lang }) => (
   </div>
 )
 
-const DetailsProduit = ({ nom, prix, description, onAdd, lang, soldout }) => (
+const ItemSubProductComponent = ({ produit, lang, dispatch }) => {
+  const nom = produit.nom[lang]
+  return (
+    <Link to="/cart">
+      <figure
+        style={{ minWidth: 150, height: 150, display: "inline-block" }}
+        className="boutique-item"
+        onClick={() => dispatch(addProduct(produit))}
+      >
+        <img src={"/images/boutique/" + produit.images[0]} alt={nom} />
+
+        <figcaption className="boutique-item-description">
+          <p
+            className="boutique-item-titre"
+            dangerouslySetInnerHTML={createMarkup(nom)}
+          />
+          <p className="boutique-item-prix">{produit.prix.toFixed(2) + "€"}</p>
+        </figcaption>
+      </figure>
+    </Link>
+  )
+}
+
+const ItemSubProduct = connect(({ lang }) => ({ lang }))(
+  ItemSubProductComponent
+)
+
+const DetailsProduit = ({
+  nom,
+  prix,
+  description,
+  onAdd,
+  lang,
+  soldout,
+  subproducts
+}) => (
   <div className="product-detail--container">
     <h2 dangerouslySetInnerHTML={createMarkup(nom[lang])} />
-    <div className="product-detail--prix">{prix.toFixed(2)} €</div>
+    {prix && <div className="product-detail--prix">{prix.toFixed(2)} €</div>}
+
     <div
       className="product-detail--description"
       dangerouslySetInnerHTML={createMarkup(
         description ? description[lang] : nom[lang]
       )}
     />
+    {subproducts && (
+      <h3>
+        {lang === "fr" ? "Choisissez votre produit" : "Choose your product"}
+      </h3>
+    )}
     {soldout ? (
       <h3>SOLD OUT</h3>
+    ) : subproducts ? (
+      subproducts.map((produit, i) => (
+        <ItemSubProduct key={i} produit={produit} lang={lang} />
+      ))
     ) : (
       <Link to="/cart" className="buy-button" onClick={onAdd}>
         {lang === "fr" ? "Ajouter au panier" : "Add to basket"}
@@ -139,49 +185,29 @@ class Product extends Component {
     if (produit === undefined) {
       window.location = "/boutique"
     }
+    const { dispatch, lang } = this.props
+
     return (
       <div className="product-detail">
         <div style={{ display: "flex" }}>
           <ImagesProduit imageIndex={this.state.imageIndex} {...produit} />
-          {produit.lien === "lili-black_lili-white_tarots" ? (
-            <DetailsProduitLili
-              onAdd={this.props.onAdd}
-              lang={this.props.lang}
-            />
-          ) : (
-            <DetailsProduit
-              onAdd={this.props.onAdd.bind(this, produit)}
-              {...produit}
-              lang={this.props.lang}
-            />
-          )}
+
+          <DetailsProduit
+            onAdd={() => dispatch(addProduct(produit))}
+            {...produit}
+            lang={lang}
+          />
         </div>
         <ListImages
           {...produit}
           onImageSelect={this.selectionImage.bind(this)}
         />
         <Link to="/" style={{ textAlign: "right" }}>
-          {this.props.lang === "fr"
-            ? "Retour à la boutique"
-            : "Back to the shop"}
+          {lang === "fr" ? "Retour à la boutique" : "Back to the shop"}
         </Link>
       </div>
     )
   }
 }
 
-function mapDispatchToProps(dispatch) {
-  return {
-    onAdd: item => {
-      return dispatch({
-        type: "ADD",
-        item
-      })
-    }
-  }
-}
-
-export default connect(
-  ({ lang }) => ({ lang }),
-  mapDispatchToProps
-)(Product)
+export default connect(({ lang }) => ({ lang }))(Product)

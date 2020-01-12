@@ -37,7 +37,84 @@ const produits = [
       en: "The Decks"
     },
     prix: 56,
+    subproducts: [
+      {
+        lien: "liliw",
+        nom: {
+          fr: "Tarot Lili White",
+          en: "Lili White Tarot"
+        },
+        images: ["lili/liliw.jpg"],
+        prix: 56,
+        poids: 330
+      },
+      {
+        lien: "lilib",
 
+        nom: {
+          fr: "Tarot Lili Black",
+          en: "Lili Black Tarot"
+        },
+        images: ["lili/lilib.jpg"],
+        prix: 56,
+        poids: 330
+      },
+      {
+        lien: "liliwb",
+        nom: {
+          fr: "Tarots Lili Black & Lili White",
+          en: "Lili Black & Lili White Decks"
+        },
+        images: ["lili/2decks.jpg"],
+        prix: 105,
+        poids: 660
+      },
+      {
+        lien: "lilibook",
+
+        nom: {
+          fr: "Livre seul",
+          en: "Book Only"
+        },
+        images: ["lili/book.jpg"],
+        prix: 12,
+        poids: 210
+      },
+
+      {
+        lien: "lilibookb",
+
+        nom: {
+          fr: "Livre + 1 Deck Lili Black",
+          en: "Book + 1 Deck Lili Black"
+        },
+        images: ["lili/bbook.jpg"],
+        prix: 65,
+        poids: 560
+      },
+      {
+        lien: "lilibookw",
+
+        nom: {
+          fr: "Livre + 1 Deck Lili White",
+          en: "Book + 1 Deck Lili White"
+        },
+        images: ["lili/wbook.jpg"],
+        prix: 65,
+        poids: 560
+      },
+      {
+        lien: "lilibookwb",
+
+        nom: {
+          fr: "Livre + Tarots Lili Black & Lili White",
+          en: "Book + Lili Black & Lili White Decks"
+        },
+        images: ["lili/2decksbook.jpg"],
+        prix: 115,
+        poids: 860
+      }
+    ],
     images: [
       "lili/boites.jpg",
       "lili/gallery/0.jpg",
@@ -61,6 +138,7 @@ const produits = [
       "lili/gallery/18.jpg"
     ]
   },
+
   {
     nom: {
       fr: "Sweet Ladies",
@@ -88,7 +166,7 @@ const produits = [
     `
     },
     images: [
-      "sweetladies/12 (Grand).jpg",
+      "sweetladies/oracle-sweet-ladies.jpg",
       "sweetladies/2 (Grand).jpg",
       "sweetladies/3 (Grand).jpg",
       "sweetladies/5 (Grand).jpg",
@@ -118,77 +196,295 @@ const produits = [
       fr: "Les Jeux",
       en: "The Decks"
     },
-    soldout: true,
-    soldoutmsg: "REEDITION FIN 2020",
+
     prix: 32,
-    poids: 120,
+    poids: 180,
     images: [
-      "tanis/tanis.jpg",
-      "tanis/0.jpg",
-      "tanis/1.jpg",
-      "tanis/2.jpg",
-      "tanis/3.jpg",
-      "tanis/4.jpg"
+      "tanis/tanis0.jpg",
+      "tanis/tanis1.jpg",
+      "tanis/tanis3.jpg",
+      "tanis/tanis4.jpg",
+      "tanis/tanis5.jpg",
+      "tanis/tanis_pochon.jpg",
+      "pochons/tanis/pochon-tanis.jpg"
     ],
     description: {
-      fr: `<p style="font-size:1.2em">Le jeu est <strong>bilingue</strong> ( Français / Anglais )</p>
-      Ce jeu est constitué de 40 cartes et d'un petit livre pour vous aider dans l'interprétation de vos tirages.
-      <div style="color:red;font-size:1.5em">Réédition prévue fin 2020</div>`,
-      en: `<p style="font-size:1.2em">This deck is <strong>bilingual</strong> ( French / English )</p>
-      This deck includes 40 cards and a book to help you interpret your spreads.
-      <div style="color:red;font-size:1.5em">New Edition scheduled for the end of 2020</div>`
+      fr: `<p style="color:red;font-size:1.2em">⚠️ Ceci est une précommande . Livraison prévue pour Avril 2020 ⚠️</p>
+      <strong>Le coffret est bilingue ( Français / Anglais )</strong>
+
+<p>Ce jeu est un Lenormand</p>
+
+<p>Le coffret se compose de 40 cartes et d'un livret pour vous aider dans l'interprétation de vos tirages.</p>
+<p>La boite en fer vous permet d'emmener votre jeu partout avec vous en toute sécurité.</p>
+<p>Les cartes sont de tailles poker et vous retrouverez l'ajout de deux cartes, une femme et un homme (de plus que traditionnellement),
+qui vous permettront d'élargir vos tirages.</p>`,
+      en: `
+      <p style="color:red;font-size:1.2em">⚠️ Ceci est une précommande . Livraison prévue pour Avril 2020 ⚠️</p>
+      <p style="font-size:1.2em">This deck is <strong>bilingual</strong> ( French / English )</p>
+      `
+    },
+    subproducts: [
+      {
+        lien: "tanis_seul",
+
+        nom: {
+          fr: "Tanis",
+          en: "Tanis"
+        },
+        images: ["tanis/tanis0.jpg"],
+        prix: 32,
+        poids: 180
+      },
+      {
+        lien: "tanispack",
+
+        nom: {
+          fr: "Tanis & Pochon",
+          en: "Tanis & Pochon"
+        },
+        images: ["tanis/tanis_pochon.jpg"],
+        prix: 50,
+        poids: 207
+      }
+    ]
+  },
+
+  {
+    nom: {
+      fr: "Reflet De Lune Lenormand",
+      en: "Reflet De Lune Lenormand"
+    },
+    lien: "reflet_de_lune",
+    cat: {
+      fr: "Les Jeux",
+      en: "The Decks"
+    },
+    prix: 32,
+    description: {
+      fr: `<p style="color:red;font-size:1.2em">⚠️ Ceci est une précommande . Livraison prévue pour Avril 2020 ⚠️</p>
+      <p style="font-size:1.2em">Le jeu est <strong>bilingue</strong> ( Français / Anglais )</p>
+<p><strong>Ce jeu est un Lenormand.</strong><br><br>Le coffret se&nbsp;compose&nbsp;de <strong>40 cartes.</strong></p>
+<p>La <strong>boite en fer</strong> vous permet d'emmener votre jeu partout avec vous en toute sécurité.</p>
+<p>Les cartes sont de taille poker et vous retrouverez l'<strong>ajout de deux cartes&nbsp;</strong>de plus que traditionnellement : une femme et un homme&nbsp; qui vous permettront d'élargir vos tirages.</p>
+    `,
+      en: `<p style="color:red;font-size:1.2em">⚠️ This is a preorder . Delivery scheduled for April 2020 ⚠️</p>
+
+    `
+    },
+    images: [
+      "reflet-de-lune/reflet_de_lune_lenormand.jpg",
+      "reflet-de-lune/0.jpg",
+      "reflet-de-lune/1.jpg",
+      "reflet-de-lune/reflet_de_lune_pack.jpg",
+      "pochons/reflet-de-lune/0.jpg"
+    ],
+    subproducts: [
+      {
+        lien: "reflet_lune_seul",
+
+        nom: {
+          fr: "Reflet De Lune Lenormand",
+          en: "Reflet De Lune Lenormand"
+        },
+        images: ["reflet-de-lune/reflet_de_lune_lenormand.jpg"],
+        prix: 32,
+        poids: 180
+      },
+      {
+        lien: "reflet_lune_pack",
+
+        nom: {
+          fr: "Reflet De Lune & Pochon",
+          en: "Reflet De Lune & Pochon"
+        },
+        images: ["reflet-de-lune/reflet_de_lune_pack.jpg"],
+        prix: 50,
+        poids: 200
+      }
+    ]
+  },
+  {
+    nom: {
+      fr: "Journal de Tirage",
+      en: "Journal de Tirage"
+    },
+    lien: "journal_tirage",
+    cat: {
+      fr: "Papeterie",
+      en: "Papeterie"
+    },
+    prix: 30,
+    images: [
+      "journal/bleu.jpg",
+      "journal/journal1.jpg",
+      "journal/journal2.jpg",
+      "journal/journal3.jpg",
+      "journal/journal4.jpg",
+      "journal/journal5.jpg",
+      "journal/journal6.jpg"
+    ],
+    subproducts: [
+      {
+        lien: "journal_noir",
+
+        nom: {
+          fr: "Journal Noir",
+          en: "Journal Noir"
+        },
+        images: ["journal/journal0.jpg"],
+        prix: 30,
+        poids: 350
+      },
+      {
+        lien: "journal_bleu",
+
+        nom: {
+          fr: "Journal Bleu",
+          en: "Journal Bleu"
+        },
+        images: ["journal/bleu.jpg"],
+        prix: 30,
+        poids: 350
+      },
+      {
+        lien: "journal_marron",
+
+        nom: {
+          fr: "Journal Marron",
+          en: "Journal Marron"
+        },
+        images: ["journal/marron.jpg"],
+        prix: 30,
+        poids: 350
+      },
+      {
+        lien: "journal_violet",
+
+        nom: {
+          fr: "Journal Violet",
+          en: "Journal Violet"
+        },
+        images: ["journal/violet.jpg"],
+        prix: 30,
+        poids: 350
+      }
+    ],
+    description: {
+      fr: `<p style="color:red;font-size:1.2em">⚠️ Ceci est une précommande . Livraison prévue pour Avril 2020 ⚠️</p>
+      <p><strong>En Français uniquement</strong></p>
+<p></p>
+<p><strong>Ce journal&nbsp;est votre compagnon idéal pour noter les tirages que vous réalisez.</strong></p>
+<p>Pensé pour vous aider au mieux dans votre pratique, il vous aidera dans l'interprétation de vos tirages et vous aidera à suivre votre évolution.</p>
+<p>Entièrement en couleur il&nbsp;est&nbsp;agréable à remplir et sa taille est idéal pour l'emporter partout avec vous.</p>
+<p><br>Vous y retrouverez une première partie consacrée aux notions sur les tirages, des astuces, des exemples de tirages...</p>
+<p>Puis&nbsp;une partie pour noter vos tirages à une carte&nbsp;et&nbsp;une&nbsp;autre&nbsp;consacrée aux tirages&nbsp;à&nbsp;plusieurs cartes.</p>
+<p>Deux signets&nbsp;font&nbsp;office de marques pages.</p>
+<p></p>
+<p><strong>Caractéristiques :</strong></p>
+<p>Couverture rigide : marron, bleu, violet, gris avec gravures or et incrustations</p>
+<p>Format A5</p>
+<p>230 pages</p>
+<p>Entièrement en couleur</p>
+<p>Langue : Français</p>
+<p><strong>Quantités très limités !</strong></p>`,
+      en: `<p style="color:red;font-size:1.2em">⚠️ Ceci est une précommande . Livraison prévue pour Avril 2020 ⚠️</p>
+      <p><strong>En Français uniquement</strong></p>
+<p></p>
+<p><strong>Ce journal&nbsp;est votre compagnon idéal pour noter les tirages que vous réalisez.</strong></p>
+<p>Pensé pour vous aider au mieux dans votre pratique, il vous aidera dans l'interprétation de vos tirages et vous aidera à suivre votre évolution.</p>
+<p>Entièrement en couleur il&nbsp;est&nbsp;agréable à remplir et sa taille est idéal pour l'emporter partout avec vous.</p>
+<p><br>Vous y retrouverez une première partie consacrée aux notions sur les tirages, des astuces, des exemples de tirages...</p>
+<p>Puis&nbsp;une partie pour noter vos tirages à une carte&nbsp;et&nbsp;une&nbsp;autre&nbsp;consacrée aux tirages&nbsp;à&nbsp;plusieurs cartes.</p>
+<p>Deux signets&nbsp;font&nbsp;office de marques pages.</p>
+<p></p>
+<p><strong>Caractéristiques :</strong></p>
+<p>Couverture rigide : marron, bleu, violet, gris avec gravures or et incrustations</p>
+<p>Format A5</p>
+<p>230 pages</p>
+<p>Entièrement en couleur</p>
+<p>Langue : Français</p>
+<p><strong>Quantités très limités !</strong></p>`
     }
   },
   {
-    nom: "Le Petit Oracle des Couleurs",
-
-    lien: "https://amzn.to/2JBhNwE",
-    cat: {
-      fr: "Jeux en collaboration",
-      en: "Collaborative Tarot Decks"
+    nom: {
+      fr: "Pochon Tanis",
+      en: "Pochon Tanis"
     },
-    images: ["collaborations/couleurs.jpg"]
+    lien: "pochon-tanis",
+    cat: {
+      fr: "Pochons",
+      en: "Pochons"
+    },
+    prix: 20,
+    poids: 26,
+    images: [
+      "pochons/tanis/pochon-tanis.jpg",
+      "pochons/tanis/0.jpg",
+      "pochons/tanis/1.jpg"
+    ],
+    description: {
+      fr: `<p style="color:red;font-size:1.2em">⚠️ Ceci est une précommande . Livraison prévue pour Avril 2020 ⚠️</p>
+      <p>Ce pochon convient aux jeux de taille oracle ou tarot.</p>
+<p>Il habillera et protégera vos jeux.</p>
+<p>En satin vert avec des motifs fleurs sur l’extérieur, il est doublé d'un satin doré à l'intérieur.<br><br></p>
+<p>Quatre cordons ferment le pochon:</p>
+<p>Deux dorés avec une perle en verre et un pompon au bout</p>
+<p>et deux vert avec une breloque trèfle au bout.</p>
+<p><br>Une jolie breloque trèfle dorée est cousue en bas sur le devant du pochon.</p>
+<p></p>
+<p>Dimensions :&nbsp;</p>
+<p>14 cm par 20 cm</p>`,
+      en: `<p>Ce pochon convient aux jeux de taille oracle ou tarot.</p>
+<p>Il habillera et protégera vos jeux.</p>
+<p>En satin vert avec des motifs fleurs sur l’extérieur, il est doublé d'un satin doré à l'intérieur.<br><br></p>
+<p>Quatre cordons ferment le pochon:</p>
+<p>Deux dorés avec une perle en verre et un pompon au bout</p>
+<p>et deux vert avec une breloque trèfle au bout.</p>
+<p><br>Une jolie breloque trèfle dorée est cousue en bas sur le devant du pochon.</p>
+<p></p>
+<p>Dimensions :&nbsp;</p>
+<p>14 cm par 20 cm</p>`
+    }
   },
-
   {
-    nom: "Le Petit Oracle des Fées",
-
-    lien: "https://amzn.to/2YNnOKb",
-    cat: {
-      fr: "Jeux en collaboration",
-      en: "Collaborative Tarot Decks"
+    nom: {
+      fr: "Pochon Reflet de Lune Lenormand",
+      en: "Pochon Reflet de Lune Lenormand"
     },
-    images: ["collaborations/oracle_des_fees.jpg"]
-  },
-  {
-    nom: "Le Petit Oracle des Animaux de Pouvoir",
-
-    lien: "https://amzn.to/2HWNyNC",
+    lien: "pochon-reflet-de-lune",
     cat: {
-      fr: "Jeux en collaboration",
-      en: "Collaborative Tarot Decks"
+      fr: "Pochons",
+      en: "Pochons"
     },
-    images: ["collaborations/animaux_de_pouvoir.jpg"]
-  },
-  {
-    nom: "Le Petit Oracle de Gaïa",
-
-    lien: "https://amzn.to/2W7vtWT",
-    cat: {
-      fr: "Jeux en collaboration",
-      en: "Collaborative Tarot Decks"
-    },
-    images: ["collaborations/oracle_de_gaia.jpg"]
-  },
-  {
-    nom: "L'Oracle des haïkus",
-
-    lien: "https://amzn.to/2VQc5ZI",
-    cat: {
-      fr: "Jeux en collaboration",
-      en: "Collaborative Tarot Decks"
-    },
-    images: ["collaborations/oracle des haikus.jpg"]
+    prix: 20,
+    poids: 26,
+    images: [
+      "pochons/reflet-de-lune/0.jpg",
+      "pochons/reflet-de-lune/1.jpg",
+      "pochons/reflet-de-lune/2.jpg",
+      "pochons/reflet-de-lune/3.jpg"
+    ],
+    description: {
+      fr: `<p style="color:red;font-size:1.2em">⚠️ Ceci est une précommande . Livraison prévue pour Avril 2020 ⚠️</p>
+      <p>Ce pochon pour un jeu de taille poker (comme les Lenormand) habillera et protégera vos jeux.</p>
+<p>En satin noir avec des étoiles dorées sur l’extérieur, il est doublé d'un satin cuivré à l'intérieur.<br><br></p>
+<p>Quatre cordons ferment le pochon:</p>
+<p>Deux cuivrés avec une perle en verre et un pompon au bout et deux noirs avec une breloque lune au bout.</p>
+<p><br>Une jolie lune est cousue sur le devant.</p>
+<p></p>
+<p>Dimensions :&nbsp;</p>
+<p>10 cm par 17 cm</p>`,
+      en: `<p style="color:red;font-size:1.2em">⚠️ This is a preorder . Delivery scheduled for April 2020 ⚠️</p>
+      <p>Ce pochon pour un jeu de taille poker (comme les Lenormand) habillera et protégera vos jeux.</p>
+<p>En satin noir avec des étoiles dorées sur l’extérieur, il est doublé d'un satin cuivré à l'intérieur.<br><br></p>
+<p>Quatre cordons ferment le pochon:</p>
+<p>Deux cuivrés avec une perle en verre et un pompon au bout et deux noirs avec une breloque lune au bout.</p>
+<p><br>Une jolie lune est cousue sur le devant.</p>
+<p></p>
+<p>Dimensions :&nbsp;</p>
+<p>10 cm par 17 cm</p>`
+    }
   },
   {
     nom: {

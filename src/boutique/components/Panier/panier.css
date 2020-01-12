@@ -72,8 +72,8 @@
   text-align: center;
 }
 .bigcart--button {
-  padding: 0.5em;
-  margin: 0.2em;
+  padding: 0.6em;
+  /* margin: 0.2em; */
   border: none;
   background: transparent;
   font-size: 1.5em;
