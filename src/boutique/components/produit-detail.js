@@ -14,7 +14,7 @@ const IMG_ROOT_URL = "/images/boutique/"
 /**
  * Retoure le produit associé au lien
  */
-const getProduit = lien => produits.find(produit => produit.lien === lien)
+const getProduit = (lien) => produits.find((produit) => produit.lien === lien)
 
 class ListImages extends Component {
   // componentDidMount() {
@@ -27,14 +27,14 @@ class ListImages extends Component {
 
     this.state = {
       photoIndex: 0,
-      isOpen: false
+      isOpen: false,
     }
   }
   handleClick(imageIndex, e) {
     e.preventDefault()
     this.setState({
       isOpen: true,
-      photoIndex: imageIndex
+      photoIndex: imageIndex,
     })
   }
   render() {
@@ -73,12 +73,12 @@ class ListImages extends Component {
             onCloseRequest={() => this.setState({ isOpen: false })}
             onMovePrevRequest={() =>
               this.setState({
-                photoIndex: (photoIndex + images.length - 1) % images.length
+                photoIndex: (photoIndex + images.length - 1) % images.length,
               })
             }
             onMoveNextRequest={() =>
               this.setState({
-                photoIndex: (photoIndex + 1) % images.length
+                photoIndex: (photoIndex + 1) % images.length,
               })
             }
           />
@@ -105,11 +105,15 @@ const ImagesProduit = ({ imageIndex, images, nom, lang }) => (
 const ItemSubProductComponent = ({ produit, lang, dispatch }) => {
   const nom = produit.nom[lang]
   return (
-    <Link to="/cart">
+    <Link to={!produit.soldout ? "/cart" : ""}>
       <figure
         style={{ minWidth: 150, height: 150, display: "inline-block" }}
-        className="boutique-item"
-        onClick={() => dispatch(addProduct(produit))}
+        className={"boutique-item" + (produit.soldout ? " soldout-grey" : "")}
+        onClick={() => {
+          if (!produit.soldout) {
+            dispatch(addProduct(produit))
+          }
+        }}
       >
         <img src={"/images/boutique/" + produit.images[0]} alt={nom} />
 
@@ -118,7 +122,14 @@ const ItemSubProductComponent = ({ produit, lang, dispatch }) => {
             className="boutique-item-titre"
             dangerouslySetInnerHTML={createMarkup(nom)}
           />
-          <p className="boutique-item-prix">{produit.prix.toFixed(2) + "€"}</p>
+
+          <p className="boutique-item-prix">
+            {produit.soldout ? (
+              <strong style={{ color: "red" }}>SOLD OUT</strong>
+            ) : (
+              produit.prix.toFixed(2) + "€"
+            )}
+          </p>
         </figcaption>
       </figure>
     </Link>
@@ -136,7 +147,7 @@ const DetailsProduit = ({
   onAdd,
   lang,
   soldout,
-  subproducts
+  subproducts,
 }) => (
   <div className="product-detail--container">
     <h2 dangerouslySetInnerHTML={createMarkup(nom[lang])} />
@@ -171,12 +182,12 @@ class Product extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      imageIndex: 0
+      imageIndex: 0,
     }
   }
   selectionImage(index) {
     this.setState({
-      imageIndex: index
+      imageIndex: index,
     })
   }
   render() {

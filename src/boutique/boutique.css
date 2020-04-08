@@ -71,11 +71,19 @@
   transform: translate3d(0,0,0);
 }
 */
+
 .boutique-item:hover .boutique-item-prix {
   margin: 1.1em;
   background: #222;
   font-size: 1.6em;
 }
+
+.boutique-item.soldout-grey:hover .boutique-item-prix {
+  margin: 0;
+}
+/* {
+  transition: none !important;
+} */
 
 .product-detail {
   position: relative;
@@ -180,6 +188,9 @@ a.buy-button:hover {
 }
 a.buy-button:active {
   background: #fb4b2b;
+}
+.soldout-grey {
+  cursor: not-allowed;
 }
 
 .soldout-grey img {
