@@ -381,7 +381,7 @@ qui vous permettront d'élargir vos tirages.</p>`,
 <p>Entièrement en couleur</p>
 <p>Langue : Français</p>
 <p><strong>Quantités très limités !</strong></p>
-<p style="color:red;font-size:1.5em"><strong>Ceci est une précommande - Livraison prévue en mai 2020</strong></p>`,
+`,
       en: `<p><strong>En Français uniquement</strong></p>
 
 <p></p>
@@ -399,7 +399,7 @@ qui vous permettront d'élargir vos tirages.</p>`,
 <p>Entièrement en couleur</p>
 <p>Langue : Français</p>
 <p><strong>Quantités très limités !</strong></p>
-<p style="color:red;font-size:1.5em"><strong>Ceci est une précommande - Livraison prévue en mai 2020</strong></p>
+
 `,
     },
   },
