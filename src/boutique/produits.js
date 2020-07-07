@@ -504,27 +504,6 @@ qui vous permettront d'élargir vos tirages.</p>`,
       en: `A beautiful bookmark inspired by the Oracle des reflets Deck`,
     },
   },
-  {
-    nom: {
-      fr: "Marque Page Tanis",
-      en: "Tanis's Bookmark",
-    },
-    lien: "marque-page-tanis",
-    cat: {
-      fr: "Marque page",
-      en: "Bookmark",
-    },
-    prix: 2,
-    poids: 5,
-    images: ["marquepage/tanis.jpg"],
-    description: {
-      fr: `Un marque page de qualité aux couleurs du Tanis lenormand.
-    <p>Taille : 5.5cm*20cm</p>
-    <p>Finition : vernis mat</p>`,
-      en: `A beautiful bookmark inspired by the Tanis Lenormand Deck.
-    `,
-    },
-  },
 
   {
     nom: {
