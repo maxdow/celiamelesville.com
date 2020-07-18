@@ -2,7 +2,7 @@
   font-family: "Calligraffitti", "Helvetica";
   font-weight: 400;
   background: #a7a0ba !important;
-  padding: 5px;
+  padding: 0.5em;
   font-size: 1.8em;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
@@ -57,7 +57,7 @@
   width: -moz-max-content;
   width: max-content;
   text-align: center;
-  height: 40px;
+  height: 1em;
   margin: 0;
   color: #222;
   line-height: 2;

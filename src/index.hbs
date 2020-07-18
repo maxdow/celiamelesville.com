@@ -8,9 +8,12 @@
   img.rounded {
     border-radius: 50%;
     margin: 1em 0;
+    max-width: 100%;
     object-fit: cover;
   }
-
+.section h2 {
+  width: 100%!important;
+}
   .container.section {
     display: flex;
     flex-direction: column;
@@ -66,6 +69,10 @@
     margin: auto
   }
 
+  .communaute-container {
+display:flex;
+flex-direction: row;
+}
   @media screen and (max-width: 922px) {
 
     .bigbutton {
@@ -76,7 +83,7 @@
       margin: 0
     }
 
-    .container.section {
+    .container.section > div{
       flex-direction: column;
     }
 
@@ -87,7 +94,47 @@
     .img-bottom {
       display: flex
     }
+    .communaute-container {
+      flex-direction: column;
+    }
+    .communaute-container img {
+      max-width: 100%;
+    }
   }
+  .video-container {
+    width: 250px;
+    {{!-- margin: 0px auto; --}}
+  }
+  .video-container > div {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+     }
+  .video-container iframe, .video-container object, .video-container embed {
+    position: absolute;top: 0;left: 0;width: 100%;height: 100%
+    }
+  .title-icon {
+    position: relative;
+    top: 9px;
+  }
+  .iconbutton-cart {
+    background-image: url("assets/cart.svg");
+    background-repeat: no-repeat;
+    background-position-x: 20px;
+  }
+    .iconbutton-cart:hover {
+    background-image: url("assets/cart.svg");
+    background-repeat: no-repeat;
+    background-position-x: 24px;
+  }
+
+
+#___ytsubscribe_0 > iframe {
+  height: 50px!important;
+}
+
 </style>
 
 <body>
@@ -116,11 +163,12 @@
           </div>
 
           <div class="buttoncontain">
-            <a href="/creations" class="bigbutton">
-              Mes Jeux
+            <a href="/a-propos" class="bigbutton">
+              Qui suis-je
             </a>
 
-            <a href="/boutique" class="bigbutton">
+            <a href="/boutique" class="bigbutton iconbutton-cart" >
+
               Boutique
             </a>
           </div>
@@ -131,12 +179,86 @@
 
         {{!-- <a href="https://www.formation-tarot.fr/planner-gratuit/">
           <img style="display:block;margin:0 auto;max-width:540px;margin-bottom:2em" src="assets/0.jpg"></a> --}}
+          <div style="display: flex;flex-direction: column; padding:2em">
+            <h2 style="font-family: 'Lato', 'Helvetica'">Inscris-toi à ma newsletter</h2>
+            <div>
+              Reçois en exclusivité toutes les infos sur mes projets à venir, et vis la magie de leur création en direct avec moi..
+            </div>
+            <div>
+              <iframe class="mj-w-res-iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://app.mailjet.com/widget/iframe/4DyS/Ena" height="100px" width="100%"></iframe>
+            </div>
+
+
+
+            <h2 style="font-family: 'Lato', 'Helvetica'">Rejoins ma communauté sur <a href="https://www.youtube.com/channel/UCxYXOEYpeeW0ye8OVrXcR0g"><img class="title-icon" src="/assets/youtube.png" alt="youtube" ></a>
+            et Instagram <a href="https://www.instagram.com/celia.melesville/?hl=fr"><img class="title-icon"  src="/assets/instagram.png" alt="instagram"></a></h2>
+
+  <div class="communaute-container">
+
+
+
+    <div style="flex:1;overflow: hidden;">
+          <div style="height:60px;position:relative">
+              <div class="g-ytsubscribe" data-channelid="UCxYXOEYpeeW0ye8OVrXcR0g" data-layout="full" data-count="default"></div>
+          </div>
+          <div>
+            <h3 style="text-align: left;">
+            Abonne-toi à ma chaine Youtube pour :
+            </h3>
+            <ul>
+              <li>Echanger avec moi en direct lors des lives</li>
+              <li>Avoir tes horoscopes et guidances gratuitement</li>
+              <li>Découvrir mes projets en image</li>
+              <li>Suivre des astuces développement personnel</li>
+              <li>Rejoindre une communauté de passionés</li>
+              <li>...</li>
+            </ul>
+          </div>
+
+          <a href="https://www.youtube.com/channel/UCxYXOEYpeeW0ye8OVrXcR0g">
+              <img height="400px" src="assets/capture_youtube.png"/>
+          </a>
+          {{!-- <div class="video-container">
+            <div>
+               <iframe id="youtube_video" width="600" height="340" frameborder="0" allowfullscreen></iframe>
+
+            </div>
+          </div> --}}
+    </div>
+
+
+  <div style="padding-top:60px;display:flex;flex-direction:column;flex:1">
+    <h3>Abonne-toi à mon instagram</h3>
+
+    <a style="margin-bottom:1em;text-align:center" href="https://www.instagram.com/celia.melesville/?hl=fr">Clique ici pour accéder au compte instagram<img class="title-icon"  src="/assets/instagram.png" alt="instagram" style="margin-left:1em ;"></a>
+
+    <a syle="margin:0 auto" href="https://www.instagram.com/celia.melesville/?hl=fr">
+      <img style="width: 400px" src="assets/capture_instagram.png"/>
+    </a>
+
+  </div>
+  </div>
+
+
+          </div>
     </div>
 
 
     </section>
   </div>
   {{> footer}}
+  <script type="text/javascript" src="https://app.mailjet.com/statics/js/iframeResizer.min.js"></script>
+  {{!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script>
+    var channelID = "UCxYXOEYpeeW0ye8OVrXcR0g";
+    var reqURL = "https://www.youtube.com/feeds/videos.xml?channel_id=";
+    $.getJSON("https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(reqURL)+channelID, function(data) {
+      var link = data.items[0].link;
+      var id = link.substr(link.indexOf("=")+1);
+    $("#youtube_video").attr("src","https://youtube.com/embed/"+id + "?controls=0&showinfo=0&rel=0");
+    });
+  </script> --}}
+  <script src="https://apis.google.com/js/platform.js"></script>
 
 </body>
 

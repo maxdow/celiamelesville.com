@@ -11,17 +11,23 @@
 
   .list-formations {}
 
-  h1 {
+  h2 {
     font-size: 2.5em !important;
     font-family: 'Times New Roman', Times, serif !important;
+    border-bottom: none!important;;
+    width: 100%!important;;
+    text-align: center!important;;
+    padding-bottom: none!important;;
+    text-shadow: none!important;;
   }
 
-  .section h2 {
+  .section h3 {
     border-bottom: none !important;
     text-align: center !important;
     text-shadow: none !important;
     width: auto !important;
     padding: 0 !important;
+    font-size: 1.6em;
   }
 
   .block-formation {
@@ -62,19 +68,24 @@
 
   .block-formation h4 {
     margin: 0;
-    font-size: 1.2em;
-
+    font-size: 1em;
   }
 
   .block-formation p {
-    margin: 0;
-    font-size: 0.8em;
-    color: #333
+    margin: 0.5em 0 0 0;
+    font-size: 0.75em;
+    color: #888;
   }
 
   .descrip {
     margin: 1em;
 
+  }
+
+  @media screen and (max-width: 922px) {
+  .block-formation > div{
+    flex-direction: column;
+  }
   }
 </style>
 
@@ -86,12 +97,12 @@
 
     <div class="main">
       <section class="container section">
-        <h1>Accédez à l'ensemble de mes formations</h1>
+        <h2>Accédez à l'ensemble de mes formations</h2>
         <div class="list-formations">
 
           <div class="block-formation">
             <div style="display:flex">
-              <h2>
+              <h3>
 
                 <a href="https://www.formation-tarot.fr/" title="Formation de Tarot en ligne">
                   <img src="../assets/formations/tarot.jpg" />
@@ -102,8 +113,8 @@
                     <p>Arcanes Mineurs</p>
                   </div>
                 </a>
-              </h2>
-              <h2>
+              </h3>
+              <h3>
                 <a href="https://formations.celiamelesville.com/formation-tirage/"
                   title="Le guide complet pour apprendre à tirer les cartes">
                   <img src="../assets/formations/tirage_cartes.jpg" />
@@ -113,7 +124,7 @@
                     <p>Adapté aux tarots et aux oracles</p>
                   </div>
                 </a>
-              </h2>
+              </h3>
             </div>
 
           </div>
@@ -122,18 +133,18 @@
           <div class="block-formation">
             <div style="display:flex">
 
-            <h2>
+            <h3>
               <a href="https://formations.celiamelesville.com/accueil-formation-petit-lenormand/"
                 title="Formation Petit Lenormand">
                 <img src="../assets/formations/lenormand.jpg" />
                 <div class="descrip">
 
                   <h4>Formation Petit Lenormand</h4>
-                  <p>Les clés pour comprendre et lire le petit Lenormand. Avec tirages</p>
+                  <p>Les clés pour comprendre et lire le petit Lenormand. Avec tirages.</p>
                 </div>
               </a>
-            </h2>
-            <h2>
+            </h3>
+            <h3>
               <a href="https://formations.celiamelesville.com/accueil-creativite/"
                 title="Comment développer sa créativité en 10 minutes par jours">
                 <img src="../assets/formations/creativite.jpg" />
@@ -143,7 +154,7 @@
                   <p>Une méthode simple et ludique!</p>
                 </div>
               </a>
-            </h2>
+            </h3>
 
 
 
