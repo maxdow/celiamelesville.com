@@ -42,8 +42,8 @@ const produits = [
         lien: "liliw",
         soldout: true,
         nom: {
-          fr: "Tarot Lili White - Réédition prévue fin 2020",
-          en: "Lili White Tarot - 2nd edition scheduled end of 2020",
+          fr: "Tarot Lili White",
+          en: "Lili White Tarot",
         },
         images: ["lili/liliw.jpg"],
         prix: 56,
@@ -60,6 +60,16 @@ const produits = [
         prix: 56,
         poids: 330,
       },
+      // {
+      //   lien: "liliwmini",
+      //   nom: {
+      //     fr: "Mini Tarot Lili White - Précommande",
+      //     en: "Mini Lili White Tarot - Preorder",
+      //   },
+      //   images: ["lili/liliw.jpg"],
+      //   prix: 56,
+      //   poids: 330,
+      // },
       // {
       //   lien: "liliwb",
       //   nom: {
@@ -78,21 +88,21 @@ const produits = [
           en: "Book Only",
         },
         images: ["lili/book.jpg"],
-        prix: 12,
+        prix: 10,
         poids: 210,
       },
 
-      {
-        lien: "lilibookb",
+      // {
+      //   lien: "lilibookb",
 
-        nom: {
-          fr: "Livre + 1 Deck Lili Black",
-          en: "Book + 1 Deck Lili Black",
-        },
-        images: ["lili/bbook.jpg"],
-        prix: 65,
-        poids: 560,
-      },
+      //   nom: {
+      //     fr: "Livre + 1 Deck Lili Black",
+      //     en: "Book + 1 Deck Lili Black",
+      //   },
+      //   images: ["lili/bbook.jpg"],
+      //   prix: 65,
+      //   poids: 560,
+      // },
       // {
       //   lien: "lilibookw",
 
@@ -540,20 +550,20 @@ qui vous permettront d'élargir vos tirages.</p>`,
     poids: 5,
     images: ["/cartepostale/tanis_coeur.jpg"],
   },
-  {
-    nom: {
-      fr: "Carte Postale - Renard Tanis",
-      en: "Post card - Tanis Fox ",
-    },
-    lien: "carte-tanis-renard",
-    cat: {
-      fr: "Cartes Postales",
-      en: "Post cards",
-    },
-    prix: 2.5,
-    poids: 5,
-    images: ["/cartepostale/tanis_renard.jpg"],
-  },
+  // {
+  //   nom: {
+  //     fr: "Carte Postale - Renard Tanis",
+  //     en: "Post card - Tanis Fox ",
+  //   },
+  //   lien: "carte-tanis-renard",
+  //   cat: {
+  //     fr: "Cartes Postales",
+  //     en: "Post cards",
+  //   },
+  //   prix: 2.5,
+  //   poids: 5,
+  //   images: ["/cartepostale/tanis_renard.jpg"],
+  // },
   {
     nom: {
       fr: "Carte Postale - Trèfle",
@@ -568,20 +578,20 @@ qui vous permettront d'élargir vos tirages.</p>`,
     poids: 5,
     images: ["/cartepostale/tanis_trefle.jpg"],
   },
-  {
-    nom: {
-      fr: "Carte Postale - La Construction",
-      en: "Post card - The Contruction",
-    },
-    lien: "carte-construction",
-    cat: {
-      fr: "Cartes Postales",
-      en: "Post cards",
-    },
-    prix: 2.5,
-    poids: 5,
-    images: ["/cartepostale/construction.jpg"],
-  },
+  // {
+  //   nom: {
+  //     fr: "Carte Postale - La Construction",
+  //     en: "Post card - The Contruction",
+  //   },
+  //   lien: "carte-construction",
+  //   cat: {
+  //     fr: "Cartes Postales",
+  //     en: "Post cards",
+  //   },
+  //   prix: 2.5,
+  //   poids: 5,
+  //   images: ["/cartepostale/construction.jpg"],
+  // },
   {
     nom: {
       fr: "Carte Postale - Dispersion",
